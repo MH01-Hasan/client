@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 // import useAuth from "../../../hooks/useAuth";
-// import gif from "../../../images/blood-donate.gif";
 // import { Link } from "react-router-dom";
-// import { Nav } from "react-bootstrap";
 
 const NavBar = () => {
   //   const { user, admin, logOut } = useAuth();
