@@ -7,6 +7,7 @@ import {
   Button,
   Alert,
 } from "@mui/material";
+import registration from "../../../images/login.mp4";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Register.css";
 import useAuth from "../../../hooks/useAuth";
@@ -61,6 +62,12 @@ const Register = () => {
           <Typography variant="h5" gutterBottom>
             New User? Register Here
           </Typography>
+          {user?.email && (
+            <Alert severity="success">
+              Your Registration Created Successfully
+            </Alert>
+          )}
+          {authError && <Alert severity="error">{authError}</Alert>}
           <form onSubmit={handleLogin}>
             <TextField
               sx={{ width: "75%", mt: 1, ml: 2 }}
@@ -111,12 +118,6 @@ const Register = () => {
               </Button>
             </NavLink>
           </form>
-          {user?.email && (
-            <Alert severity="success">
-              Your Registration Created Successfully
-            </Alert>
-          )}
-          {authError && <Alert severity="error">{authError}</Alert>}
         </Grid>
       </Grid>
     </Container>
