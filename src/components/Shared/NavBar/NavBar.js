@@ -2,16 +2,10 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import "./NavBar.css";
-<<<<<<< HEAD
-// import useAuth from "../../../hooks/useAuth";
-// import { Link } from "react-router-dom";
-import { BiCart } from 'react-icons/bi';
-import { useSelector } from "react-redux";
-=======
 import { Link } from "react-router-dom";
 import { Nav } from "react-bootstrap";
-
->>>>>>> dcefa322bfab4d9e605dd80e2b7b645cfe2e949c
+import { useSelector } from "react-redux";
+import { BiCart } from "react-icons/bi";
 const NavBar = () => {
   const { user, logOut } = useAuth(); // admin,
 
