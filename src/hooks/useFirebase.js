@@ -20,7 +20,7 @@ const useFirebase = () => {
 
   const [authError, setAuthError] = useState("");
 
-  //   const [admin, setAdmin] = useState(false);
+  const [admin, setAdmin] = useState(false);
 
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
@@ -34,7 +34,7 @@ const useFirebase = () => {
         setUser(newUser);
 
         // Save user to the dashboard
-        // saveUser(email, name, "POST");
+        saveUser(email, name, "POST");
 
         // Update Profile / Send name to firebase after creation
         updateProfile(auth.currentUser, {
@@ -68,8 +68,8 @@ const useFirebase = () => {
     setIsLoading(true);
     signInWithPopup(auth, googleProvider)
       .then((result) => {
-        // const user = result.user;
-        // saveUser(user.email, user.displayName, "PUT");
+        const user = result.user;
+        saveUser(user.email, user.displayName, "PUT");
         setAuthError("");
         const destination = location?.state?.from || "/";
         history.replace(destination);
@@ -93,11 +93,11 @@ const useFirebase = () => {
     return () => unSubscribed;
   }, [auth]);
 
-  //   useEffect(() => {
-  //     fetch(`http://localhost:5000/users/${user.email}`)
-  //       .then((res) => res.json())
-  //       .then((data) => setAdmin(data.admin));
-  //   }, [user.email]);
+  useEffect(() => {
+    fetch(`http://localhost:5000/users/${user.email}`)
+      .then((res) => res.json())
+      .then((data) => setAdmin(data.admin));
+  }, [user.email]);
 
   const logOut = () => {
     setIsLoading(true);
@@ -107,20 +107,20 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
 
-  //   const saveUser = (email, displayName, method) => {
-  //     const user = { email, displayName };
-  //     fetch("http://localhost:5000/users", {
-  //       method: method,
-  //       headers: {
-  //         "content-type": "application/json",
-  //       },
-  //       body: JSON.stringify(user),
-  //     }).then();
-  //   };
+  const saveUser = (email, displayName, method) => {
+    const user = { email, displayName };
+    fetch("http://localhost:5000/users", {
+      method: method,
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    }).then();
+  };
 
   return {
     user,
-    // admin,
+    admin,
     isLoading,
     authError,
     signInWithGoogle,
