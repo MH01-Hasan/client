@@ -1,0 +1,20 @@
+.cart-fild {
+    border: none;
+    background-color: #dbe1e642;
+    padding: 6px;
+    font-family: serif;
+    height: 362px;
+}
+
+.image-card {
+    height: 230px;
+    width: 100%;
+}
+
+.details-link {
+    background-color: #e17e7e;
+    padding: 7px 35px;
+    border-radius: 3px;
+    color: #fff;
+    text-decoration: none !important
+}
