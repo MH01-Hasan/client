@@ -1,0 +1,74 @@
+.uploder-image {
+    width: 390px;
+    height: 399px;
+    background-color: #161b1945;
+    border-radius: 6px;
+    margin-bottom: 18px;
+}
+
+.addproduct-img {
+    width: 390px;
+    height: 399px;
+    border-radius: 6px;
+}
+
+.image-input {
+    padding: 1px 7px;
+    border: 1px solid #808080;
+    margin-right: 11px;
+    border-radius: 5px;
+}
+
+.img-upload-button {
+    border: none;
+    padding: 5px 7px;
+    border-radius: 5px;
+    background-color: #31c795;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.img-upload-button:disabled {
+    background-color: #7a7e7ef2;
+}
+
+.spnir {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50%;
+}
+
+/* upliad fild */
+.upload-fild {
+    background-color: #7fffd424;
+}
+
+.producr-info-input-fild {
+    width: 47%;
+    height: 34px;
+    margin-right: 18px;
+    border: 1px solid #808080;
+    padding-left: 12px;
+    border-radius: 3px;
+    margin-bottom: 11px;
+}
+
+.producr-info-input-fild.Description {
+    border: 1px solid #808080;
+    padding-left: 12px;
+    border-radius: 3px;
+    width: 97%;
+    height: 138px;
+}
+
+.thirdsection {
+    width: 30%;
+    height: 34px;
+    margin-right: 20px;
+    border: 1px solid #808080;
+    padding-left: 12px;
+    border-radius: 3px;
+    margin-bottom: 11px;
+}

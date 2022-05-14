@@ -1,0 +1,33 @@
+.redio-btn-css {
+    padding: 4px 7px;
+    margin-right: 9px;
+    border-radius: 50% !important;
+    font-family: none;
+}
+
+.Size {
+    font-size: 19px;
+    font-family: serif;
+    letter-spacing: 3px;
+}
+
+.details-add-to {
+    border: 1px solid #ef7822;
+    padding: 5px 41px;
+    border-radius: 3px;
+    margin-top: 14px;
+    font-size: 17px;
+    background-color: #fff;
+}
+
+.details-add-to:hover {
+    background-color: #ffe4c4;
+    color: #a52a2a;
+}
+
+.price-details {
+    margin-top: 10px;
+    font-family: none;
+    letter-spacing: 1px;
+    font-size: 22px;
+}
