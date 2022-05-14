@@ -1,0 +1,249 @@
+import React, { useState } from 'react';
+import { Table } from 'react-bootstrap';
+import { useForm } from 'react-hook-form';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import './Shiping.css'
+import { ButtonGroup, ToggleButton } from 'react-bootstrap';
+// import Step2 from './Step2';
+
+const Shiping = () => {
+
+    const cart = useSelector((state) => state.cart);
+    const [data, setData] = useState({})
+
+    const { register, handleSubmit, reset } = useForm({});
+    const [step, setStep] = useState(false)
+
+
+    const onSubmit = data => {
+        setData(data)
+        setStep(true)
+        reset()
+    }
+
+    ////step 2 part 
+
+    const [radioValue, setRadioValue] = useState('');
+    const total = Number(cart?.cardTotalAmount) + Number(radioValue)
+    console.log(total)
+
+    const radios = [
+        { name: '	UAE-2-4 DAYS Delivery', value: '27' },
+        { name: 'WESTERN REGION/HATTA/ISLAND (2-4 Days)', value: '57' },
+
+    ];
+    const handelClick = () => {
+        console.log("Clickme")
+
+    }
+
+    return (
+        <div className='container mt-5'>
+
+            <div className='row'>
+
+                <div className='shiping-info col-lg-7 col-md-6 col-sm-12'>
+                    <h2>EMIRATLIFESTYLE</h2>
+                    <div>
+                        {/* ..................................1st Part SheckOut Method. Start..................*/}
+                        {
+                            !step && <form onSubmit={handleSubmit(onSubmit)}>
+                                <div>
+                                    <h4 className='Contact-information'>Contact information</h4>
+                                    <input type='email' {...register("email")} placeholder='Email' required={true} className='Country' />
+                                    <br />
+
+                                    <div className='check-box'>
+                                        <input type="checkbox"
+                                            {...register("check")} required={true} className='check' />
+                                        <label>Email me with news and offers</label>
+                                    </div>
+
+
+                                </div>
+
+                                <div>
+                                    <h5 className='Shipping-address'> Shipping address
+                                    </h5>
+                                </div>
+
+
+
+                                <select {...register("Country")} className='Country' placeholder='Country'>
+                                    <option value="United Arab Emirates">United Arab Emirates</option>
+
+                                </select>
+                                <br />
+
+                                <input {...register("firstName")} placeholder='First Name' required={true} className='First-Name' />
+                                <input {...register("lastName")} placeholder='Last Name' required={true} className='First-Name last' />
+                                <br />
+
+                                <input {...register("Address")} placeholder='Address' required={true} className='Country' />
+                                <br />
+                                <input {...register("city")} placeholder='City' required={true} className='First-Name' />
+                                <select {...register("Emirate")} className='First-Name last' placeholder='Emirate'>
+                                    <option disabled value="Emirate">Emirate</option>
+                                    <option value="Abu Dhabi">Abu Dhabi</option>
+                                    <option value="Ajman">Ajman</option>
+                                    <option value="Dubai">Dubai</option>
+                                    <option value="Ras al-Khaimah">Ras al-Khaimah</option>
+                                    <option value="Sharjah">Sharjah</option>
+                                    <option value="Fujairah">Fujairah</option>
+                                    <option value="Umm al-Quwain">Umm al-Quwain</option>
+
+                                </select>
+                                <br />
+                                <input {...register("Phone")} placeholder='Phone' required={true} className='Country' />
+                                <br />
+
+                                <input type="submit" className='submit-btn' />
+
+                                <Link to='/cart' className='back-cart'>
+                                    Return to Cart
+                                </Link>
+                            </form>
+
+                        }
+                        {/* ..................................1st Part CheckOut Method End..................*/}
+
+                        {/* .................................. 2nd Part Shiping Method Start...................*/}
+                        {
+                            step && <div>
+                                <div className='contact-ship' >
+                                    <div className="p">
+                                        <h6>contact   :  {data?.email}  </h6>
+
+                                    </div>
+                                    <hr />
+                                    <div className="p1">
+                                        <h6>
+                                            Ship to   :{data?.Address}, {data?.Emirate},{data?.Country}
+                                        </h6>
+
+                                    </div>
+
+                                </div>
+
+                                <div className='Shipping-method'>
+                                    <h4 className='method'>Shipping method</h4>
+
+                                    <div>
+                                        <div >
+                                            <ButtonGroup className='readio-btn-delevery'>
+                                                {radios.map((radio, idx) => (
+                                                    <div>
+                                                        <ToggleButton
+                                                            key={idx}
+                                                            id={`radio-${idx}`}
+                                                            type="radio"
+                                                            variant={idx % 2 ? 'outline-success' : 'outline-danger'}
+                                                            name="radio"
+                                                            value={radio.value}
+                                                            checked={radioValue === radio.value}
+                                                            onChange={(e) => setRadioValue(e.currentTarget.value)}
+                                                            required={true}
+                                                            className='ToggleButton-delevery'
+                                                        >
+                                                            <div className='delevery-value'>
+                                                                <h6>{radio.name}</h6>
+                                                                <h6> AED {radio.value}</h6>
+                                                            </div>
+                                                        </ToggleButton>
+                                                    </div>
+                                                ))}
+                                            </ButtonGroup>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div className='payment'>
+                                    <h4>Payment </h4>
+                                    <p>All transactions are secure and encrypted.</p>
+
+
+                                </div>
+
+                                <div>
+                                    <button onClick={handelClick}>Submit Order</button>
+                                </div>
+                            </div>
+                        }
+                        {/* .................................. 2nd Part Shiping Method. End..................*/}
+
+
+                    </div>
+
+
+                </div>
+
+                {/*................................ Product Show........................................... */}
+                <div className='final-cart col-lg-5 col-md-6 col-sm-12 '>
+                    <Table responsive className='check-out-product-fild'>
+                        <thead>
+                            <tr>
+                                <th className=''>Product</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                cart?.cardItem?.map(cartItem => <tr key={cartItem._id}  >
+                                    <td className=''>
+                                        <div className='product-name'>
+                                            <img src={cartItem.image} alt="" className='checkout-img' />
+                                            <div className="">
+                                                <p className=''>{cartItem.name}</p>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            {cartItem.price}
+                                        </div>
+                                    </td>
+                                    <td className=''> <div className=" ">
+
+                                        <div className="">{cartItem.cartQuantity}</div>
+
+                                    </div></td>
+                                    <td><div className="c  ">
+                                        AED {cartItem.price * cartItem.cartQuantity}
+                                    </div></td>
+                                </tr>
+                                )
+                            }
+                        </tbody>
+                    </Table>
+                    <div className="check-out-subtotal">
+                        <h6 className='total-Amount-text'>Shiping</h6>
+                        <h6 className="amount-Text">
+                            AED {
+                                `${radioValue}.00`
+                            }
+                        </h6>
+                    </div>
+                    <div className="check-out-subtotal">
+                        <h4 className='total-Amount-text'>SubTotal</h4>
+                        <h6 className="amount-Text">
+                            AED {`${total}.00`}
+                        </h6>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    );
+};
+
+export default Shiping;
+

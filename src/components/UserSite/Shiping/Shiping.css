@@ -1,0 +1,116 @@
+.product-name {}
+
+.checkout-img {
+    width: 88px;
+}
+
+.final-cart {
+    background-color: #cdcbc96b;
+    height: 100vh;
+    font-family: 'Josefin Slab', serif;
+}
+
+/* sub total */
+
+.check-out-subtotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.amount-Text {
+    margin-right: 24px;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+
+.Country {
+    width: 90%;
+    height: 38px;
+    margin-bottom: 18px;
+}
+
+.First-Name {
+    width: 43%;
+    height: 38px;
+    margin-bottom: 18px;
+}
+
+.First-Name.last {
+    margin-left: 24px;
+}
+
+.Contact-information {
+    margin-bottom: 29px;
+}
+
+.check-box {
+    font-size: 18px;
+}
+
+.check {
+    width: 46px;
+    height: 18px;
+}
+
+.Shipping-address {
+    margin-top: 18px;
+    margin-bottom: 26px;
+}
+
+.submit-btn {
+    letter-spacing: 3px;
+    border: 1px solid #ed3434;
+    padding: 6px 39px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #ff3200;
+    background-color: #fff;
+}
+
+.submit-btn:hover {
+    background-color: #e96c17;
+    color: #fff;
+}
+
+.back-cart {
+    margin-left: 18px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.contact-ship {
+    border: 1px solid #f00;
+    padding: 9px;
+    width: 86%;
+    border-radius: 4px;
+    margin-top: 51px;
+}
+
+.Shipping-method {
+    margin-top: 36px;
+}
+
+.readio-btn-delevery {
+    display: flex;
+    flex-direction: column;
+}
+
+.ToggleButton-delevery {
+    width: 85%;
+    margin-top: 7px;
+}
+
+.delevery-value {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.method {
+    margin-bottom: 21px;
+    letter-spacing: 1px;
+}

@@ -4,13 +4,16 @@ import useAuth from "../../../hooks/useAuth";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 import { Nav } from "react-bootstrap";
-
+import { useSelector } from "react-redux";
+import { BiCart } from "react-icons/bi";
 const NavBar = () => {
   const { user, logOut } = useAuth(); // admin,
 
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
+  const cart = useSelector((state) => state.cart);
+  console.log(cart.cardItem)
   return (
     <nav className="navbar">
       <div className="nav-container">
@@ -28,9 +31,28 @@ const NavBar = () => {
               activeClassName="active"
               className="nav-links"
               onClick={handleClick}
-              className="menu-name"
+
             >
               Home
+            </NavLink>
+          </li>
+
+          <li className="nav-item">
+            <NavLink
+              exact
+              to="/cart"
+              activeClassName="active"
+              className="nav-links cart-icon"
+              onClick={handleClick}
+            >
+              <div className='cart'>
+                <p className='cart-item'>{
+                  cart.cardItem?.length
+                }</p>
+                <BiCart className='cart-icon' />
+
+
+              </div>
             </NavLink>
           </li>
 
