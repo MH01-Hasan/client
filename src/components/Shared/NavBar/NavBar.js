@@ -13,7 +13,7 @@ const NavBar = () => {
 
   const handleClick = () => setClick(!click);
   const cart = useSelector((state) => state.cart);
-  console.log(cart.cardItem)
+  console.log(cart.cardItem);
   return (
     <nav className="navbar">
       <div className="nav-container">
@@ -31,7 +31,7 @@ const NavBar = () => {
               activeClassName="active"
               className="nav-links"
               onClick={handleClick}
-
+              className="menu-name"
             >
               Home
             </NavLink>
@@ -44,14 +44,11 @@ const NavBar = () => {
               activeClassName="active"
               className="nav-links cart-icon"
               onClick={handleClick}
+              className="menu-name"
             >
-              <div className='cart'>
-                <p className='cart-item'>{
-                  cart.cardItem?.length
-                }</p>
-                <BiCart className='cart-icon' />
-
-
+              <div className="cart">
+                <p className="cart-item">{cart.cardItem?.length}</p>
+                <BiCart className="cart-icon" />
               </div>
             </NavLink>
           </li>
