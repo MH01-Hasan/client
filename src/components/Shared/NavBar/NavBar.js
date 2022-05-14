@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 import "./NavBar.css";
+<<<<<<< HEAD
 // import useAuth from "../../../hooks/useAuth";
 // import { Link } from "react-router-dom";
 import { BiCart } from 'react-icons/bi';
 import { useSelector } from "react-redux";
+=======
+import { Link } from "react-router-dom";
+import { Nav } from "react-bootstrap";
+
+>>>>>>> dcefa322bfab4d9e605dd80e2b7b645cfe2e949c
 const NavBar = () => {
-  //   const { user, admin, logOut } = useAuth();
+  const { user, logOut } = useAuth(); // admin,
 
   const [click, setClick] = useState(false);
 
@@ -83,7 +90,7 @@ const NavBar = () => {
             )
           )} */}
 
-          {/* <li className="nav-item ">
+          <li className="nav-item ">
             {user.email ? (
               <Nav.Link>
                 <button className="btn btn-danger" onClick={logOut}>
@@ -96,7 +103,7 @@ const NavBar = () => {
               </Nav.Link>
             )}
           </li>
-          <li className="user-name">{user?.displayName}</li> */}
+          <li className="user-name">{user?.displayName}</li>
         </ul>
         <div className="nav-icon " onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
