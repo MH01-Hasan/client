@@ -45,7 +45,7 @@ const Shiping = () => {
 
                 <div className='shiping-info col-lg-7 col-md-6 col-sm-12'>
                     <h2>EMIRATLIFESTYLE</h2>
-                    <div>
+                    <div className='information-fild-checkout'>
                         {/* ..................................1st Part SheckOut Method. Start..................*/}
                         {
                             !step && <form onSubmit={handleSubmit(onSubmit)}>
@@ -98,7 +98,7 @@ const Shiping = () => {
                                 <input {...register("Phone")} placeholder='Phone' required={true} className='Country' />
                                 <br />
 
-                                <input type="submit" className='submit-btn' />
+                                <input type="submit" value='Continue' className='submit-btn' />
 
                                 <Link to='/cart' className='back-cart'>
                                     Return to Cart
@@ -119,7 +119,7 @@ const Shiping = () => {
                                     <hr />
                                     <div className="p1">
                                         <h6>
-                                            Ship to   :{data?.Address}, {data?.Emirate},{data?.Country}
+                                            Ship to   :  {data?.Address}, {data?.Emirate},{data?.Country}
                                         </h6>
 
                                     </div>
@@ -147,8 +147,8 @@ const Shiping = () => {
                                                             className='ToggleButton-delevery'
                                                         >
                                                             <div className='delevery-value'>
-                                                                <h6>{radio.name}</h6>
-                                                                <h6> AED {radio.value}</h6>
+                                                                <h6 className='delevery-cost'>{radio.name}</h6>
+                                                                <h6 className='delevery-cost'> AED {radio.value}</h6>
                                                             </div>
                                                         </ToggleButton>
                                                     </div>
@@ -163,12 +163,13 @@ const Shiping = () => {
                                 <div className='payment'>
                                     <h4>Payment </h4>
                                     <p>All transactions are secure and encrypted.</p>
+                                    <p className='Cash-on-delevery'>Cash on Delivery (COD)</p>
 
 
                                 </div>
 
                                 <div>
-                                    <button onClick={handelClick}>Submit Order</button>
+                                    <button className='SubmitOrder' disabled={!radioValue} onClick={handelClick}>Submit Order</button>
                                 </div>
                             </div>
                         }

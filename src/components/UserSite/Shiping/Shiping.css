@@ -88,6 +88,7 @@
     width: 86%;
     border-radius: 4px;
     margin-top: 51px;
+    color: #474545fc;
 }
 
 .Shipping-method {
@@ -113,4 +114,108 @@
 .method {
     margin-bottom: 21px;
     letter-spacing: 1px;
+}
+
+.Cash-on-delevery {
+    padding: 5px;
+    border: 1px solid #dc3545;
+    width: 85%;
+    height: 38px;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 17px;
+}
+
+.payment {
+    margin-top: 24px;
+}
+
+.SubmitOrder {
+    border: none;
+    margin-top: 11px;
+    margin-bottom: 36px;
+    padding: 9px 26px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    background-color: #f34e4e;
+    color: #fff;
+}
+
+.SubmitOrder:disabled {
+    background-color: #7a7e7ef2;
+}
+
+/* media Quree */
+
+@media screen and (max-width: 844px) {
+    .contact-ship {
+        padding-left: 11px;
+        width: 95%;
+        margin-left: 5px;
+    }
+
+    .method {
+        margin-left: 6px;
+        font-size: 23px;
+    }
+
+    .ToggleButton-delevery {
+        width: 93%;
+        margin-left: 5px;
+    }
+
+    .delevery-cost {
+        font-size: 12px;
+    }
+
+    .payment {
+        margin-left: 6px;
+    }
+
+    .Cash-on-delevery {
+        width: 95%;
+        font-size: 20px;
+        padding: 1px 14px;
+    }
+
+    .SubmitOrder {
+        margin-left: 22%;
+        margin-top: 26px;
+    }
+
+    .Country {
+        width: 95%;
+
+        height: 38px;
+        padding: 2px 14px;
+    }
+
+    .information-fild-checkout {
+        margin-left: 7px;
+    }
+
+    .First-Name {
+        width: 95%;
+        margin-top: 11px;
+        height: 41px;
+    }
+
+    .First-Name.last {
+        margin-left: 0px;
+        margin-top: 8px;
+        margin-bottom: 14px;
+    }
+
+    .submit-btn {
+        margin-right: 52px;
+        margin-top: 31px;
+        margin-bottom: 45px;
+    }
+
+    .Contact-information {
+        margin-bottom: 36px;
+    }
+
+
 }
