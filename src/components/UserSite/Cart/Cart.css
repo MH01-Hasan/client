@@ -180,3 +180,48 @@
     border: none !important;
 
 }
+
+@media screen and (max-width: 844px) {
+    .cart-sumany {
+        display: flex;
+        flex-direction: column;
+        margin-left: 25px;
+    }
+
+    .cart-checkout {
+        margin-top: 29px;
+        font-size: 21px;
+    }
+
+    .chk-out {
+        font-size: 30px;
+        padding: 10px 73px;
+    }
+
+    .subtotal {
+        margin-right: -7px;
+    }
+
+    .total {
+        font-size: 24px;
+    }
+
+    .amount {
+        font-size: 24px;
+    }
+
+    .clear {
+        font-size: 23px;
+        background-color: #d44e4e;
+        padding: 7px 16px px;
+    }
+
+    .continue-shopping {
+        font-size: 30px;
+        margin-top: 12px;
+        margin-bottom: 92px;
+    }
+
+
+
+}
