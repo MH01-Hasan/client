@@ -1,0 +1,15 @@
+.time {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.add-btn {
+    width: 120px;
+    margin-top: 67px;
+}
+
+.input-image-fild {
+    width: 240px;
+    height: 60px;
+}

@@ -10,7 +10,7 @@ import './Cart.css'
 
 const Cart = () => {
     const cart = useSelector((state) => state.cart);
-    console.log(cart.cardItem.item)
+
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -30,6 +30,7 @@ const Cart = () => {
     const handelincreasetocart = (cartItem) => {
         dispatch(increasetocart(cartItem))
     };
+
     const handelcrealecart = () => {
         dispatch(crealecart())
     };
