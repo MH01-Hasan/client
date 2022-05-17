@@ -13,7 +13,7 @@ const NavBar = () => {
 
   const handleClick = () => setClick(!click);
   const cart = useSelector((state) => state.cart);
-  console.log(cart.cardItem);
+
   return (
     <nav className="navbar">
       <div className="nav-container">

@@ -22,7 +22,7 @@ const HomeProduct = () => {
                         <Card className='cart-fild mt-5'>
                             <Card.Img src={product.image} className='image-card' />
                             <Card.Body>
-                                <Card.Title>{product.name}</Card.Title>
+                                <Card.Title className='product-name' >{product.name}</Card.Title>
                                 <p className='price-card'> Price : {product.price} Tk</p>
                                 <div className='add-footer'>
 

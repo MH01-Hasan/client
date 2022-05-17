@@ -1,14 +1,14 @@
 .uploder-image {
-    width: 390px;
-    height: 399px;
+    width: 269px;
+    height: 276px;
     background-color: #161b1945;
     border-radius: 6px;
     margin-bottom: 18px;
 }
 
 .addproduct-img {
-    width: 390px;
-    height: 399px;
+    width: 269px;
+    height: 276px;
     border-radius: 6px;
 }
 
@@ -26,11 +26,13 @@
     background-color: #31c795;
     color: #fff;
     cursor: pointer;
+    margin-top: 15px;
 
 }
 
 .img-upload-button:disabled {
     background-color: #7a7e7ef2;
+
 }
 
 .spnir {
@@ -42,7 +44,9 @@
 
 /* upliad fild */
 .upload-fild {
-    background-color: #7fffd424;
+    background-color: #d3d3d3;
+    padding: 19px;
+    border-radius: 9px;
 }
 
 .producr-info-input-fild {
@@ -71,4 +75,40 @@
     padding-left: 12px;
     border-radius: 3px;
     margin-bottom: 11px;
+}
+
+.images {
+    margin-bottom: 10px;
+}
+
+.addproduct-btn {
+    padding: 5px 37px;
+    margin-top: 17px;
+    margin-bottom: 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    background-color: #e35a09c2;
+    border: none;
+    color: #fff;
+}
+
+.addproduct-btn:hover {
+    background-color: #4295dd;
+    color: #fff9f9;
+}
+
+.slider-image {
+    border-radius: 4px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.slider-image img {
+    width: 144px;
+    height: 126px;
+    border-radius: 5px;
 }
