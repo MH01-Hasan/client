@@ -4,13 +4,23 @@ import { useDispatch } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { addToCart } from '../../../Redux/cardSlics';
 import './Details.css'
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+import { FreeMode, Navigation, Thumbs } from "swiper";
 
 const Details = () => {
     const { id } = useParams()
+    const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
     // ....................................Api Load Data...........................
     const [product, setProduct] = useState({})
+    console.log(product.image)
+
     useEffect(() => {
-        fetch(`https://secure-island-42519.herokuapp.com/Product/${id}`)
+        fetch(`http://localhost:5000/Product/${id}`)
             .then(res => res.json())
             .then(item => {
                 setProduct(item)
@@ -63,7 +73,28 @@ const Details = () => {
         <div className='container'>
             <div className='row mt-5 mb-5'>
                 <div className='col-lg-6 col-sm-12'>
-                    <Card.Img src={product.image} />
+                    <Swiper
+                        style={{
+                            "--swiper-navigation-color": "#fff",
+                            "--swiper-pagination-color": "#fff",
+                        }}
+                        spaceBetween={10}
+                        navigation={true}
+                        thumbs={{ swiper: thumbsSwiper }}
+                        modules={[FreeMode, Navigation, Thumbs]}
+                        className="mySwiper2"
+                    >
+                        {
+                            product.image.map(imagess => <SwiperSlide>
+                                <img src={imagess?.image} className='image-chaild' />
+                            </SwiperSlide>,
+                            )
+
+                        }
+
+
+                    </Swiper>
+
 
                 </div>
 

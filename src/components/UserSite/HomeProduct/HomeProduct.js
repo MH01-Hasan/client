@@ -6,10 +6,11 @@ import "./HomeProduct.css";
 const HomeProduct = () => {
 
     const [products, setProducts] = useState([])
+    console.log(products.image)
 
 
     useEffect(() => {
-        fetch('https://secure-island-42519.herokuapp.com/Product')
+        fetch('http://localhost:5000/Product')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
@@ -20,9 +21,11 @@ const HomeProduct = () => {
                 {
                     products.map(product => <div className='col-lg-3 col-md-4 col-sm-12' key={product._id}>
                         <Card className='cart-fild mt-5'>
-                            <Card.Img src={product.image} className='image-card' />
+                            <Card.Img src={product?.image[0].image} className='image-card' />
+
                             <Card.Body>
-                                <Card.Title className='product-name' >{product.name}</Card.Title>
+                                <Card.Title className='product-name' >{product.Product_Name}</Card.Title>
+                                <h6>{product.Model}</h6>
                                 <p className='price-card'> Price : {product.price} Tk</p>
                                 <div className='add-footer'>
 
