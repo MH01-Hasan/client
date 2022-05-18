@@ -10,41 +10,35 @@ import {
   increasetocart,
   removeFromCart,
 } from "../../../Redux/cardSlics";
-// import { removeFromCart, decreasecart, increasetocart, crealecart, getTotals } from '../../Redux/cardSlics';
 import "./Cart.css";
 
 const Cart = () => {
-    const cart = useSelector((state) => state.cart);
+  const cart = useSelector((state) => state.cart);
 
-    const dispatch = useDispatch()
-
-    useEffect(() => {
-        dispatch(getTotals())
-    }, [cart, dispatch])
-    //remove cart//
-    const handelremovecart = (cartItem) => {
-        dispatch(removeFromCart(cartItem))
-
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(getTotals());
-  }, [cart, dispatch]);
+    dispatch(getTotals())
+  }, [cart, dispatch])
   //remove cart//
+
+
+
   const handelremovecart = (cartItem) => {
     dispatch(removeFromCart(cartItem));
   };
-  //remove cart//
 
-    const handeldicresstocart = (cartItem) => {
-        dispatch(decreasecart(cartItem))
-    };
-    const handelincreasetocart = (cartItem) => {
-        dispatch(increasetocart(cartItem))
-    };
 
-    const handelcrealecart = () => {
-        dispatch(crealecart())
-    };
+  const handeldicresstocart = (cartItem) => {
+    dispatch(decreasecart(cartItem))
+  };
+  const handelincreasetocart = (cartItem) => {
+    dispatch(increasetocart(cartItem))
+  };
+
+  const handelcrealecart = () => {
+    dispatch(crealecart())
+  };
 
   return (
     <div>

@@ -10,6 +10,9 @@ import Login from "./components/Login/Login/Login";
 import Register from "./components/Login/Register/Register";
 import NavBar from "./components/Shared/NavBar/NavBar";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
+
+import ManageOrder from "./components/Admin/ManageOrder/ManageOrder";
+import Order from "./components/Admin/ManageOrder/Order";
 import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
 import HomeProduct from "./components/UserSite/HomeProduct/HomeProduct";
 import MakeAdmin from "./components/Admin/MakeAdmin/MakeAdmin";
@@ -33,6 +36,10 @@ function App() {
             </Route>
             <Route path="/cart" element={<Cart />} />
             <Route path="/details/:id" element={<Details />} />
+            <Route path="/Shiping" element={<Shiping />} />
+            <Route path="/ManageOrder" element={<ManageOrder />} />
+            <Route path="/Order/:id" element={<Order />} />
+
             <Route path="/" element={<PrivateRoute />}>
               <Route path="/Shiping" element={<Shiping />} />
             </Route>
@@ -46,6 +53,4 @@ function App() {
 }
 
 export default App;
-<Route path="/cart">
-  <Cart />
-</Route>;
+

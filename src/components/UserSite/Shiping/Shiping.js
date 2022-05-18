@@ -8,6 +8,7 @@ import { ButtonGroup, ToggleButton } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
 import axios from 'axios';
 import { crealecart } from '../../../Redux/cardSlics';
+import Swal from 'sweetalert2';
 
 
 const Shiping = () => {
@@ -39,6 +40,9 @@ const Shiping = () => {
     const dispatch = useDispatch()
     let navigate = useNavigate();
 
+    const current = new Date();
+    const date = `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`;
+
     const handelClick = () => {
         const order = {
             email: user?.email,
@@ -46,12 +50,21 @@ const Shiping = () => {
             Shipinginfo: { data },
             Shiping_Method: { radioValue },
             Total_Amount: { total },
-            Status: `Pending`
+            Status: `Pending`,
+            Date: { date }
         }
+
         axios.post("http://localhost:5000/Orders", order)
             .then((res) => {
                 if (res.data.insertedId) {
                     dispatch(crealecart())
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Your Order has been success',
+                        showConfirmButton: false,
+                        timer: 2500
+                    })
                     navigate('/')
                 }
             });
