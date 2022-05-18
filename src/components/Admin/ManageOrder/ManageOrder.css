@@ -1,0 +1,53 @@
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pdf-body {
+    margin: auto;
+    width: 850px;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 33px;
+    size: landscape;
+}
+
+
+.customer-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 51px;
+    margin-bottom: 23px;
+    size: landscape;
+}
+
+.build-info {
+    margin-bottom: 4px;
+}
+
+.print-div {
+    display: flex;
+    justify-content: end;
+    padding-top: 24px;
+}
+
+.Print-btn {
+    border: 1px solid #0f0d0d59;
+    padding: 3px 58px;
+    border-radius: 3px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #fff;
+    background-color: #099095;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+.fild-pdf {
+    background-color: #b9b3ab;
+    padding: 0px 45px;
+}
+
+.print-bttom {
+    padding-bottom: 110px;
+}

@@ -12,7 +12,9 @@ import Login from "./components/Login/Login/Login";
 import Register from "./components/Login/Register/Register";
 import NavBar from "./components/Shared/NavBar/NavBar";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
-import Timer from "./components/Admin/Timer/Timer";
+
+import ManageOrder from "./components/Admin/ManageOrder/ManageOrder";
+import Order from "./components/Admin/ManageOrder/Order";
 
 function App() {
   return (
@@ -29,7 +31,10 @@ function App() {
             <Route path="/details/:id" element={<Details />} />
             <Route path="/Shiping" element={<Shiping />} />
             <Route path="/Information" element={<Information />} />
-            <Route path="/Timer" element={<Timer />} />
+
+            <Route path="/ManageOrder" element={<ManageOrder />} />
+            <Route path="/Order/:id" element={<Order />} />
+
           </Routes>
         </Router>
       </AuthProvider>
