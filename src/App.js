@@ -14,6 +14,7 @@ import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
 import HomeProduct from "./components/UserSite/HomeProduct/HomeProduct";
 import MakeAdmin from "./components/Admin/MakeAdmin/MakeAdmin";
 import AdminRoute from "./components/Login/AdminRoute/AdminRoute";
+import Timer from "./components/Admin/Timer/Timer";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
               <Route path="/Shiping" element={<Shiping />} />
             </Route>
             <Route path="/Information" element={<Information />} />
+            <Route path="/Timer" element={<Timer />} />
           </Routes>
         </Router>
       </AuthProvider>

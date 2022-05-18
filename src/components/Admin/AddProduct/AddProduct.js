@@ -12,10 +12,17 @@ const AddProduct = () => {
     const [selectedImages, setSelectedImages] = useState([])
     const [imageData, setImageData] = useState(null)
 
-    console.log(selectedImages)
-    console.log(imageData)
+    // const [imageurl, setImageurl] = useState([])
+
+
     const [loading, setLoading] = useState(false)
+
     const [disabled, setDisabled] = useState(true)
+    const [disabled1, setDisabled1] = useState(true)
+    const [disabled2, setDisabled2] = useState(true)
+    const [disabled3, setDisabled3] = useState(true)
+    const [disabled4, setDisabled4] = useState(true)
+
     const handelImage = (e) => {
         setSelectedImages(e.target.files[0])
         if (selectedImages) {
@@ -32,7 +39,8 @@ const AddProduct = () => {
                 const response = await axios.post(
                     "https://api.cloudinary.com/v1_1/dwkqd8sxn/image/upload", formData
                 )
-                setImageData(response.data)
+                setImageData(response?.data)
+                // setImageurl((prev) => [...prev, response?.data])
                 setLoading(false)
             } catch (error) {
                 console.error(error)
@@ -41,20 +49,169 @@ const AddProduct = () => {
 
         postImage()
     }
+
+    // ................................image 1 Upload.................................//
+    const [selectedImages1, setSelectedImages1] = useState([])
+    const [imageData1, setImageData1] = useState(null)
+    const handelImage1 = (e) => {
+        setSelectedImages1(e.target.files[0])
+        if (selectedImages1) {
+            setDisabled1(false)
+        }
+    }
+
+    const uploadImage1 = () => {
+        const formData = new FormData()
+        formData.append("file", selectedImages1)
+        formData.append("upload_preset", "iamge1")
+        setLoading(true)
+        const postImage = async () => {
+            try {
+                const response = await axios.post(
+                    "https://api.cloudinary.com/v1_1/dwkqd8sxn/image/upload", formData
+                )
+                setImageData1(response?.data)
+                // setImageurl((prev) => [...prev, response?.data])
+                setLoading(false)
+            } catch (error) {
+                console.error(error)
+            }
+        }
+
+        postImage()
+    }
+    // ................................image 1 Upload end.................................//
+
+
+
+    // ................................image 2 Upload.................................//
+    const [selectedImages2, setSelectedImages2] = useState([])
+    const [imageData2, setImageData2] = useState(null)
+    const handelImage2 = (e) => {
+        setSelectedImages2(e.target.files[0])
+        if (selectedImages2) {
+            setDisabled2(false)
+        }
+    }
+
+    const uploadImage2 = () => {
+        const formData = new FormData()
+        formData.append("file", selectedImages2)
+        formData.append("upload_preset", "iamge1")
+        setLoading(true)
+        const postImage = async () => {
+            try {
+                const response = await axios.post(
+                    "https://api.cloudinary.com/v1_1/dwkqd8sxn/image/upload", formData
+                )
+                setImageData2(response?.data)
+                // setImageurl((prev) => [...prev, response?.data])
+                setLoading(false)
+            } catch (error) {
+                console.error(error)
+            }
+        }
+
+        postImage()
+    }
+    // ................................image 2 Upload end.................................//
+
+    // ................................image 3 Upload.................................//
+    const [selectedImages3, setSelectedImages3] = useState([])
+    const [imageData3, setImageData3] = useState(null)
+    const handelImage3 = (e) => {
+        setSelectedImages3(e.target.files[0])
+        if (selectedImages3) {
+            setDisabled3(false)
+        }
+    }
+
+    const uploadImage3 = () => {
+        const formData = new FormData()
+        formData.append("file", selectedImages3)
+        formData.append("upload_preset", "iamge1")
+        setLoading(true)
+        const postImage = async () => {
+            try {
+                const response = await axios.post(
+                    "https://api.cloudinary.com/v1_1/dwkqd8sxn/image/upload", formData
+                )
+                setImageData3(response?.data)
+                // setImageurl((prev) => [...prev, response?.data])
+                setLoading(false)
+            } catch (error) {
+                console.error(error)
+            }
+        }
+
+        postImage()
+    }
+    // ................................image 4 Upload end.................................//
+
+    // ................................image 3 Upload.................................//
+    const [selectedImages4, setSelectedImages4] = useState([])
+    const [imageData4, setImageData4] = useState(null)
+    const handelImage4 = (e) => {
+        setSelectedImages4(e.target.files[0])
+        if (selectedImages4) {
+            setDisabled4(false)
+        }
+    }
+
+    const uploadImage4 = () => {
+        const formData = new FormData()
+        formData.append("file", selectedImages4)
+        formData.append("upload_preset", "iamge1")
+        setLoading(true)
+        const postImage = async () => {
+            try {
+                const response = await axios.post(
+                    "https://api.cloudinary.com/v1_1/dwkqd8sxn/image/upload", formData
+                )
+                setImageData4(response?.data)
+                setLoading(false)
+            } catch (error) {
+                console.error(error)
+            }
+        }
+
+        postImage()
+    }
+    // ................................image 4 Upload end.................................//
+
+
+
+
     // ....................Image UpLoad  end ??..........................
 
     // ...................Product InFormation...........................
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
+        data.image = [{
+            image: imageData?.secure_url,
+            image1: imageData1?.secure_url,
+            image2: imageData2?.secure_url,
+            image3: imageData3?.secure_url,
+            image4: imageData4?.secure_url,
+        }]
         console.log(data)
+        axios.post('http://localhost:5000/Product', data)
+            .then(res => {
+                console.log(res.data)
+                if (res.data.acknowledged) {
+                    alert('sussces fully add product')
+                    reset()
+                }
+
+            })
 
     };
 
 
 
     return (
-        <div className='container mt-5 upload-fild'>
+        <div className='container mt-5 upload-fild mb-5'>
 
             <div className='row'>
                 <div className='image-Upload col-lg-5 col-sm-12'>
@@ -81,28 +238,108 @@ const AddProduct = () => {
                             Upload Image
                         </button>
                     </div>
+
+                    {/* image Upload */}
+                    <div>
+                        <div className='images image1'>
+                            <input
+                                type="file"
+                                name="file"
+                                id="file"
+                                onChange={handelImage1}
+                                className="image-input"
+                            />
+                            <button disabled={disabled1} onClick={uploadImage1} className="img-upload-button">
+                                Upload Image
+                            </button>
+
+                        </div>
+                        <div className='images image2'>
+                            <input
+                                type="file"
+                                name="file"
+                                id="file"
+                                onChange={handelImage2}
+                                className="image-input"
+                            />
+                            <button disabled={disabled2} onClick={uploadImage2} className="img-upload-button">
+                                Upload Image
+                            </button>
+
+                        </div>
+                        <div className='images image3'>
+                            <input
+                                type="file"
+                                name="file"
+                                id="file"
+                                onChange={handelImage3}
+                                className="image-input"
+                            />
+                            <button disabled={disabled3} onClick={uploadImage3} className="img-upload-button">
+                                Upload Image
+                            </button>
+
+                        </div>
+                        <div className='images image4'>
+                            <input
+                                type="file"
+                                name="file"
+                                id="file"
+                                onChange={handelImage4}
+                                className="image-input"
+                            />
+                            <button disabled={disabled4} onClick={uploadImage4} className="img-upload-button">
+                                Upload Image
+                            </button>
+
+                        </div>
+
+                    </div>
                 </div>
 
                 <div className="Product-Info col-lg-7 col-sm-12">
                     <div>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input {...register("Product_Name")} type='text' placeholder='Product_Name' required={true} className="producr-info-input-fild" />
-                            <input {...register("Titel")} type='text' placeholder='Titel' required={true} className="producr-info-input-fild" /> <br />
+                            <input {...register("Model")} type='text' placeholder='Model No' required={true} className="producr-info-input-fild" /> <br />
                             <textarea  {...register("Description")} type='text' placeholder='Description' required={true} className="producr-info-input-fild Description" /> <br />
-                            <input {...register("Price")} type="number" placeholder='Price' required={true} className='thirdsection' />
-                            <select {...register("catagory")} className='thirdsection'>
-                                <option value="category">category</option>
-                                <option value="male">male</option>
-                                <option value="other">other</option>
-                                <option value="female">female</option>
-                                <option value="male">male</option>
-                                <option value="other">other</option>
+                            <input {...register("price")} type="number" placeholder='Price' required={true} className='thirdsection' />
+                            <select {...register("Catagory")} className='thirdsection'>
+                                <option disabled value="Category">Category</option>
+                                <option value="Air_Jorden">Air Jorden</option>
+                                <option value="Air_Force">Air Force</option>
+                                <option value="Dunk">Dunk</option>
+                                <option value="Air-Max">Air Max</option>
+
+                                <option value="Yeezy_350_v2">Yeezy 350 v2</option>
+                                <option value="Yeezy_700">Yeezy 700</option>
+                                <option value="Yeezy_500">Yeezy_500</option>
+                                <option value="Ultra_Boost">Ultra Boost</option>
+
+                                <option value='Designers_Shoes'>Designers Shoes</option>
+                                <option value="Ladies_Bag">Ladies Bag</option>
+                                <option value="Wallet">Wallet</option>
+                                <option value="Watch">Watch</option>
+                                <option value="Others">Others</option>
+
+
                             </select>
                             <input {...register("firstName")} placeholder='Brand Name' required={true} className='thirdsection' /> <br />
-                            <input type="submit" />
+                            <div className='slider-image'>
+                                <img src={imageData1?.secure_url} alt="" />
+                                <img src={imageData2?.secure_url} alt="" />
+                                <img src={imageData3?.secure_url} alt="" />
+                                <img src={imageData4?.secure_url} alt="" />
+                            </div>
+
+
+
+                            <input type="submit" className='addproduct-btn' />
 
                         </form>
                     </div>
+
+
 
                 </div>
             </div>

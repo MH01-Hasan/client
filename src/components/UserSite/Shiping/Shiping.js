@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import './Shiping.css'
 import { ButtonGroup, ToggleButton } from 'react-bootstrap';
-// import Step2 from './Step2';
+import useAuth from '../../../hooks/useAuth';
+import axios from 'axios';
+import { crealecart } from '../../../Redux/cardSlics';
+
 
 const Shiping = () => {
-
+    const { user, logOut } = useAuth();
     const cart = useSelector((state) => state.cart);
     const [data, setData] = useState({})
 
@@ -26,15 +29,32 @@ const Shiping = () => {
 
     const [radioValue, setRadioValue] = useState('');
     const total = Number(cart?.cardTotalAmount) + Number(radioValue)
-    console.log(total)
+
 
     const radios = [
         { name: '	UAE-2-4 DAYS Delivery', value: '27' },
         { name: 'WESTERN REGION/HATTA/ISLAND (2-4 Days)', value: '57' },
 
     ];
+    const dispatch = useDispatch()
+    let navigate = useNavigate();
+
     const handelClick = () => {
-        console.log("Clickme")
+        const order = {
+            email: user?.email,
+            item: { cart },
+            Shipinginfo: { data },
+            Shiping_Method: { radioValue },
+            Total_Amount: { total },
+            Status: `Pending`
+        }
+        axios.post("http://localhost:5000/Orders", order)
+            .then((res) => {
+                if (res.data.insertedId) {
+                    dispatch(crealecart())
+                    navigate('/')
+                }
+            });
 
     }
 
@@ -133,9 +153,8 @@ const Shiping = () => {
                                         <div >
                                             <ButtonGroup className='readio-btn-delevery'>
                                                 {radios.map((radio, idx) => (
-                                                    <div>
+                                                    <div key={idx}>
                                                         <ToggleButton
-                                                            key={idx}
                                                             id={`radio-${idx}`}
                                                             type="radio"
                                                             variant={idx % 2 ? 'outline-success' : 'outline-danger'}

@@ -14,9 +14,17 @@ import {
 import "./Cart.css";
 
 const Cart = () => {
-  const cart = useSelector((state) => state.cart);
-  console.log(cart.cardItem.item);
-  const dispatch = useDispatch();
+    const cart = useSelector((state) => state.cart);
+
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(getTotals())
+    }, [cart, dispatch])
+    //remove cart//
+    const handelremovecart = (cartItem) => {
+        dispatch(removeFromCart(cartItem))
+
 
   useEffect(() => {
     dispatch(getTotals());
@@ -27,15 +35,16 @@ const Cart = () => {
   };
   //remove cart//
 
-  const handeldicresstocart = (cartItem) => {
-    dispatch(decreasecart(cartItem));
-  };
-  const handelincreasetocart = (cartItem) => {
-    dispatch(increasetocart(cartItem));
-  };
-  const handelcrealecart = () => {
-    dispatch(crealecart());
-  };
+    const handeldicresstocart = (cartItem) => {
+        dispatch(decreasecart(cartItem))
+    };
+    const handelincreasetocart = (cartItem) => {
+        dispatch(increasetocart(cartItem))
+    };
+
+    const handelcrealecart = () => {
+        dispatch(crealecart())
+    };
 
   return (
     <div>
