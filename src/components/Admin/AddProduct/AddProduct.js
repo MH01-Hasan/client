@@ -3,6 +3,7 @@ import axios from "axios"
 import './AddProduct.css'
 import { ScaleLoader } from 'react-spinners';
 import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
 
 
 
@@ -188,19 +189,25 @@ const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        data.image = [{
-            image: imageData?.secure_url,
-            image1: imageData1?.secure_url,
-            image2: imageData2?.secure_url,
-            image3: imageData3?.secure_url,
-            image4: imageData4?.secure_url,
-        }]
+        data.image = [
+            { image: imageData?.secure_url },
+            { image1: imageData1?.secure_url },
+            { image2: imageData2?.secure_url },
+            { image3: imageData3?.secure_url },
+            { image4: imageData4?.secure_url },
+        ]
         console.log(data)
         axios.post('http://localhost:5000/Product', data)
             .then(res => {
                 console.log(res.data)
                 if (res.data.acknowledged) {
-                    alert('sussces fully add product')
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'successfully Add New Product',
+                        showConfirmButton: false,
+                        timer: 2500
+                    })
                     reset()
                 }
 
@@ -324,7 +331,7 @@ const AddProduct = () => {
 
 
                             </select>
-                            <input {...register("firstName")} placeholder='Brand Name' required={true} className='thirdsection' /> <br />
+                            <input {...register("Brand_Name")} placeholder='Brand Name' required={true} className='thirdsection' /> <br />
                             <div className='slider-image'>
                                 <img src={imageData1?.secure_url} alt="" />
                                 <img src={imageData2?.secure_url} alt="" />
