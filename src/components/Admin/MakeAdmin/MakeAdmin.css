@@ -1,0 +1,12 @@
+.make-admin-form {
+  padding: 25px 50px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.make-admin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

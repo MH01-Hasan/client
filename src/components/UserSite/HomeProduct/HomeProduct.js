@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import './HomeProduct.css'
+import React, { useEffect, useState } from "react";
+import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import "./HomeProduct.css";
 
 const HomeProduct = () => {
 
