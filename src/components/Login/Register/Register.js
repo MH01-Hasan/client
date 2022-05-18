@@ -7,7 +7,6 @@ import {
   Button,
   Alert,
 } from "@mui/material";
-import registration from "../../../images/login.mp4";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Register.css";
 import useAuth from "../../../hooks/useAuth";
@@ -15,7 +14,7 @@ import useAuth from "../../../hooks/useAuth";
 const Register = () => {
   const [loginData, setLoginData] = useState({});
 
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   const { user, registerUser, authError } = useAuth();
 
@@ -24,7 +23,7 @@ const Register = () => {
     const value = e.target.value;
     const newLoginData = { ...loginData };
     newLoginData[field] = value;
-    console.log(newLoginData);
+    // console.log(newLoginData);
     setLoginData(newLoginData);
   };
 
@@ -33,7 +32,7 @@ const Register = () => {
       alert("Your Password didn't match");
       return;
     }
-    registerUser(loginData.name, loginData.email, loginData.password, history);
+    registerUser(loginData.name, loginData.email, loginData.password, navigate);
     e.preventDefault();
   };
 

@@ -192,6 +192,7 @@
 
   .nav-logo {
     margin-top: 7px;
+    margin-left: 5px;
   }
 
   /* .nav-logo:hover {
@@ -204,6 +205,6 @@
 }
 
 .user-name {
-  color: #000000;
+  color: yellow;
   margin-left: -19px;
 }
