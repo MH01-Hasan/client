@@ -4,20 +4,20 @@ import { useDispatch } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { addToCart } from '../../../Redux/cardSlics';
 import './Details.css'
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
-import { FreeMode, Navigation, Thumbs } from "swiper";
+
 
 const Details = () => {
     const { id } = useParams()
-    const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
     // ....................................Api Load Data...........................
     const [product, setProduct] = useState({})
-    console.log(product.image)
+    const imagess = [
+        product?.image,
+        product?.image1,
+        product?.image2,
+        product?.image3,
+        product?.image4,
+    ]
+
 
     useEffect(() => {
         fetch(`http://localhost:5000/Product/${id}`)
@@ -27,6 +27,8 @@ const Details = () => {
 
             })
     }, [])
+
+
     // ....................................Api Load Data...........................
 
     // ....................................add to Card Product..........................
@@ -42,7 +44,6 @@ const Details = () => {
     // ....................................user Inpur Product Size..........................
     const [radioValue, setRadioValue] = useState('');
     product["Size"] = radioValue;
-    console.log(product)
     const radios = [
 
         { name: '36', value: '36' },
@@ -59,10 +60,12 @@ const Details = () => {
     ];
     // ....................................user Inpur Product Size..........................
 
+    const [selectedimg, setSelectedimg] = useState(imagess[0])
+    console.log(selectedimg)
 
+    console.log(imagess[0])
 
-
-    if (!product.image) {
+    if (!product) {
         return <p className='lodding'>Lodding................</p>
 
     }
@@ -73,36 +76,27 @@ const Details = () => {
         <div className='container'>
             <div className='row mt-5 mb-5'>
                 <div className='col-lg-6 col-sm-12'>
-                    <Swiper
-                        style={{
-                            "--swiper-navigation-color": "#fff",
-                            "--swiper-pagination-color": "#fff",
-                        }}
-                        spaceBetween={10}
-                        navigation={true}
-                        thumbs={{ swiper: thumbsSwiper }}
-                        modules={[FreeMode, Navigation, Thumbs]}
-                        className="mySwiper2"
-                    >
-                        {
-                            product.image.map(imagess => <SwiperSlide>
-                                <img src={imagess?.image} className='image-chaild' />
-                            </SwiperSlide>,
-                            )
+                    <div className='container-imagess'>
+                        <img src={selectedimg} alt="" className='slected' />
 
-                        }
+                        <div className='imagecontainer'>
+                            {
+                                imagess?.map((img, index) => <img key={index}
+                                    src={img}
+                                    alt="dog"
+                                    onClick={() => setSelectedimg(img)}
+                                />)
+                            }
 
+                        </div>
 
-                    </Swiper>
-
-
+                    </div>
                 </div>
 
-                <div className='col-lg-6 col-sm-12'>
-                    <h1 className='details-name'>{product.name}</h1>
-                    <small className='discription'>{product.discription}</small>
+                <div className='col-lg-6 col-sm-12 product-info-details'>
+                    <p>Brand : {product?.Brand_Name}</p>
+                    <h1 className='details-name'>{product?.Product_Name}</h1>
                     <h5 className='price-details'>{`Price: AED ${product.price}`}</h5>
-
                     <div>
                         <h5 className='Size'>Size</h5>
 
@@ -125,6 +119,12 @@ const Details = () => {
                         </ButtonGroup>
                     </div>
                     <button onClick={() => handeladdToCard(product)} className='details-add-to'>Add to cart</button>
+
+                    <div className='Description mt-5'>
+                        <p>
+                            {product?.Description}
+                        </p>
+                    </div>
 
                 </div>
 

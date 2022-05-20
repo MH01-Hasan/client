@@ -31,10 +31,9 @@ const Shiping = () => {
     const [radioValue, setRadioValue] = useState('');
     const total = Number(cart?.cardTotalAmount) + Number(radioValue)
 
-
     const radios = [
-        { name: '	UAE-2-4 DAYS Delivery', value: '27' },
-        { name: 'WESTERN REGION/HATTA/ISLAND (2-4 Days)', value: '57' },
+        { name: '	UAE-2-4 DAYS Delivery', value: '25' },
+        { name: 'WESTERN REGION/HATTA/ISLAND (2-4 Days)', value: '50' },
 
     ];
     const dispatch = useDispatch()
