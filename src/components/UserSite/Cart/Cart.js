@@ -116,7 +116,7 @@ const Cart = () => {
                   </td>
                   <td>
                     <div className="child3  ">
-                      ${cartItem.price * cartItem.cartQuantity}
+                      AED {cartItem.price * cartItem.cartQuantity}
                     </div>
                   </td>
                 </tr>

@@ -189,17 +189,16 @@ const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        data.image = [
-            { image: imageData?.secure_url },
-            { image1: imageData1?.secure_url },
-            { image2: imageData2?.secure_url },
-            { image3: imageData3?.secure_url },
-            { image4: imageData4?.secure_url },
-        ]
+
+        data.image = imageData?.secure_url
+        data.image1 = imageData1?.secure_url
+        data.image2 = imageData2?.secure_url
+        data.image3 = imageData3?.secure_url
+        data.image4 = imageData4?.secure_url
+
         console.log(data)
         axios.post('http://localhost:5000/Product', data)
             .then(res => {
-                console.log(res.data)
                 if (res.data.acknowledged) {
                     Swal.fire({
                         position: 'top-end',
