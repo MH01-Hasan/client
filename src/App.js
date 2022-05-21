@@ -19,6 +19,9 @@ import MakeAdmin from "./components/Admin/MakeAdmin/MakeAdmin";
 import Timer from "./components/Admin/Timer/Timer";
 import Footer from "./components/Shared/Footer/Footer";
 import NotFound from "./components/Shared/NotFound/NotFound";
+import ManageProduct from "./components/Admin/ManageProduct/ManageProduct";
+import AirJorden from "./components/UserSite/Catagory/AirJorden";
+import AirForce from "./components/UserSite/Catagory/AirForce";
 
 function App() {
   return (
@@ -48,6 +51,9 @@ function App() {
             <Route path="/Shiping" element={<Shiping />} />
             <Route path="/ManageOrder" element={<ManageOrder />} />
             <Route path="/Order/:id" element={<Order />} />
+            <Route path="/ManageProduct" element={<ManageProduct />} />
+            <Route path="product/catagory/AirJorden" element={<AirJorden />} />
+            <Route path="product/catagory/AirForce" element={<AirForce />} />
 
             {/* <Route path="/" element={<PrivateRoute />}> */}
             <Route
