@@ -18,6 +18,7 @@ import MakeAdmin from "./components/Admin/MakeAdmin/MakeAdmin";
 // import AdminRoute from "./components/Login/AdminRoute/AdminRoute";
 import Timer from "./components/Admin/Timer/Timer";
 import Footer from "./components/Shared/Footer/Footer";
+import NotFound from "./components/Shared/NotFound/NotFound";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Router>
           <NavBar />
           <Routes>
+            <Route path="*" element={<NotFound />} />
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
