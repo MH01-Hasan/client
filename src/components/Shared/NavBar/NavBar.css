@@ -1,5 +1,5 @@
 .navbar {
-  background-color: rgba(0, 0, 0, 0.688);
+  background-color: #eff1fe;
   text-transform: uppercase;
   height: 80px;
   display: flex;
@@ -15,7 +15,7 @@
 
 @media screen and (max-width: 467px) {
   .navbar {
-    background-color: rgba(0, 0, 0, 0.699);
+    background-color: #eff1fe;
   }
 }
 
@@ -77,14 +77,14 @@
 }
 
 .menu-name {
-  color: rgb(243, 78, 78);
+  color: #6e7990;
   text-decoration: none;
 }
 
 .menu-name:hover {
   list-style: none;
   text-decoration: none;
-  color: rgb(243, 78, 78);
+  color: #f68685;
 }
 
 .nav-item:after {
@@ -98,7 +98,7 @@
 
 .nav-item .active {
   font-weight: 800;
-  color: rgb(226, 65, 65);
+  color: #6e7990;
 }
 
 .nav-icon {
@@ -107,7 +107,7 @@
 
 .nav-name {
   list-style: none;
-  color: rgb(243, 78, 78);
+  color: #6e7990;
   text-decoration: none;
   font-size: 24px;
   font-weight: 700;
@@ -116,7 +116,7 @@
 .nav-name:hover {
   list-style: none;
   text-decoration: none;
-  color: rgb(243, 78, 78);
+  color: #6e7990;
 }
 
 .cart {
@@ -128,12 +128,12 @@
 
 .cart-icon {
   font-size: 31px;
-  color: #e83c3c;
+  color: #6e7990;
 }
 
 .cart-item {
   position: absolute;
-  background-color: #121010;
+  background-color: #ea5b59;
   color: #fff;
   border-radius: 50%;
   margin-top: 2px;
@@ -148,7 +148,7 @@
 
 @media screen and (max-width: 1100px) {
   .nav-menu {
-    background-color: rgba(0, 0, 0, 0.688);
+    background-color: #eff1fe;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -168,7 +168,7 @@
   }
 
   .nav-item .active {
-    color: rgb(243, 78, 78);
+    color: #6e7990;
     border: none;
   }
 
@@ -186,7 +186,7 @@
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: rgb(243, 78, 78);
+    color: #6e7990;
     /* margin-bottom: 30px; */
   }
 
@@ -205,6 +205,6 @@
 }
 
 .user-name {
-  color: yellow;
+  color: #f68685;
   margin-left: -19px;
 }
