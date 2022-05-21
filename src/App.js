@@ -18,6 +18,7 @@ import MakeAdmin from "./components/Admin/MakeAdmin/MakeAdmin";
 // import AdminRoute from "./components/Login/AdminRoute/AdminRoute";
 import Timer from "./components/Admin/Timer/Timer";
 import Footer from "./components/Shared/Footer/Footer";
+import NotFound from "./components/Shared/NotFound/NotFound";
 import ManageProduct from "./components/Admin/ManageProduct/ManageProduct";
 import AirJorden from "./components/UserSite/Catagory/AirJorden";
 import AirForce from "./components/UserSite/Catagory/AirForce";
@@ -29,6 +30,7 @@ function App() {
         <Router>
           <NavBar />
           <Routes>
+            <Route path="*" element={<NotFound />} />
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
