@@ -36,7 +36,31 @@ const NavBar = () => {
               Home
             </NavLink>
           </li>
-
+          {/* {admin === true ? (
+            <li className="nav-item">
+              <NavLink
+                to="/admindashboard"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+                className="menu-name"
+              >
+                Dashboard
+              </NavLink>
+            </li>
+          ) : ( */}
+          <li className="nav-item">
+            <NavLink
+              to="/"
+              activeClassName="active"
+              className="nav-links"
+              onClick={handleClick}
+              className="menu-name"
+            >
+              My Order
+            </NavLink>
+          </li>
+          {/* )} */}
           <li className="nav-item">
             <NavLink
               exact
@@ -52,49 +76,20 @@ const NavBar = () => {
               </div>
             </NavLink>
           </li>
-
-          {/* {admin === true ? (
-            <li className="nav-item">
-              <NavLink
-                to="/admindashboard"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-                className="menu-name"
-              >
-                Dashboard
-              </NavLink>
-            </li>
-          ) : (
-            user?.email && (
-              <li className="nav-item">
-                <NavLink
-                  to="/userdashboard"
-                  activeClassName="active"
-                  className="nav-links"
-                  onClick={handleClick}
-                  className="menu-name"
-                >
-                  Dashboard
-                </NavLink>
-              </li>
-            )
-          )} */}
-
           <li className="nav-item ">
             {user.email ? (
               <Nav.Link>
-                <button className="btn btn-danger" onClick={logOut}>
+                <button className="btn btn-primary" onClick={logOut}>
                   LOGOUT
                 </button>
               </Nav.Link>
             ) : (
               <Nav.Link as={Link} to="/login">
-                <button className="btn btn-danger">LOGIN</button>
+                <button className="btn btn-primary">LOGIN</button>
               </Nav.Link>
             )}
           </li>
-          <li className="user-name">{user?.displayName}</li>
+          <li className="user-name ml-2 mb-2">{user?.displayName}</li>
         </ul>
         <div className="nav-icon " onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
