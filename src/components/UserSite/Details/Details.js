@@ -60,7 +60,7 @@ const Details = () => {
     ];
     // ....................................user Inpur Product Size..........................
 
-    const [selectedimg, setSelectedimg] = useState(imagess[0])
+    const [selectedimg, setSelectedimg] = useState(imagess[1])
     console.log(selectedimg)
 
     console.log(imagess[0])

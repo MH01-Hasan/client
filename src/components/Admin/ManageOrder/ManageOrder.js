@@ -23,7 +23,7 @@ const ManageOrder = () => {
                         <thead>
                             <tr>
                                 <th>Sl.No</th>
-                                <th>Date</th>
+                                <th>Product</th>
                                 <th>Name</th>
                                 <th>Number</th>
                                 <th>Table heading</th>
