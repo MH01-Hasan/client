@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Designers_Shoes = () => {
+const DesignersShoes = () => {
   const [Designers_Shoes, setDesigners_Shoes] = useState([]);
   console.log(Designers_Shoes);
 
@@ -17,4 +17,4 @@ const Designers_Shoes = () => {
   return <div></div>;
 };
 
-export default Designers_Shoes;
+export default DesignersShoes;

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Ladies_Bag = () => {
+const LadiesBag = () => {
   const [Ladies_Bag, setLadies_Bag] = useState([]);
   console.log(Ladies_Bag);
 
@@ -17,4 +17,4 @@ const Ladies_Bag = () => {
   return <div></div>;
 };
 
-export default Ladies_Bag;
+export default LadiesBag;

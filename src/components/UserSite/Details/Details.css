@@ -82,3 +82,39 @@
 .product-info-details {
     font-family: 'Josefin Slab', serif;
 }
+
+.product-info-details p {
+    font-size: 29px;
+}
+
+@media screen and (max-width: 844px) {
+    .container-imagess img {
+        width: 100%;
+    }
+
+    .imagecontainer {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 37px;
+    }
+
+    .imagecontainer img {
+        width: 23%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        height: 69px;
+    }
+
+    .product-info-details p {
+        font-size: 29px;
+        margin-top: 2px;
+    }
+
+    .Size {
+        margin-top: 19px;
+        font-size: 20px;
+    }
+
+
+}

@@ -22,6 +22,15 @@ import NotFound from "./components/Shared/NotFound/NotFound";
 import ManageProduct from "./components/Admin/ManageProduct/ManageProduct";
 import AirJorden from "./components/UserSite/Catagory/AirJorden";
 import AirForce from "./components/UserSite/Catagory/AirForce";
+import AirMax from "./components/UserSite/Catagory/AirMax";
+import DesignersShoes from "./components/UserSite/Catagory/DesignersShoes";
+import Dunk from "./components/UserSite/Catagory/Dunk";
+import LadiesBag from "./components/UserSite/Catagory/LadiesBag";
+import Others from "./components/UserSite/Catagory/Others";
+import Wallet from "./components/UserSite/Catagory/Wallet";
+import Watch from "./components/UserSite/Catagory/Watch";
+import UltraBoost from "./components/UserSite/Catagory/UltraBoost";
+import MyOrder from "./components/UserSite/MyOrder/MyOrder";
 
 function App() {
   return (
@@ -54,6 +63,21 @@ function App() {
             <Route path="/ManageProduct" element={<ManageProduct />} />
             <Route path="product/catagory/AirJorden" element={<AirJorden />} />
             <Route path="product/catagory/AirForce" element={<AirForce />} />
+            <Route path="product/catagory/AirMax" element={<AirMax />} />
+
+            <Route path="product/catagory/Designers_Shoes" element={<DesignersShoes />} />
+
+            <Route path="product/catagory/Dunk" element={<Dunk />} />
+
+            <Route path="product/catagory/LadiesBag" element={<LadiesBag />} />
+
+            <Route path="product/catagory/Others" element={<Others />} />
+
+            <Route path="product/catagory/Wallet" element={<Wallet />} />
+
+            <Route path="product/catagory/Watch" element={<Watch />} />
+
+            <Route path="product/catagory/UltraBoost" element={<UltraBoost />} />
 
             {/* <Route path="/" element={<PrivateRoute />}> */}
             <Route
@@ -67,6 +91,7 @@ function App() {
             {/* </Route> */}
             <Route path="/Information" element={<Information />} />
             <Route path="/Timer" element={<Timer />} />
+            <Route path="/MyOrder" element={<MyOrder />} />
           </Routes>
           <Footer />
         </Router>
