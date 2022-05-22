@@ -10,25 +10,28 @@ const Details = () => {
     const { id } = useParams()
     // ....................................Api Load Data...........................
     const [product, setProduct] = useState({})
-    const imagess = [
-        product?.image,
-        product?.image1,
-        product?.image2,
-        product?.image3,
-        product?.image4,
-    ]
+    const [lodding, setLodding] = useState(false)
+
 
 
     useEffect(() => {
+        setLodding(true)
         fetch(`http://localhost:5000/Product/${id}`)
             .then(res => res.json())
             .then(item => {
                 setProduct(item)
+                setLodding(false)
 
             })
     }, [])
 
-
+    const imagess = [
+        product.image,
+        product.image1,
+        product.image2,
+        product.image3,
+        product.image4,
+    ]
     // ....................................Api Load Data...........................
 
     // ....................................add to Card Product..........................
@@ -60,10 +63,10 @@ const Details = () => {
     ];
     // ....................................user Inpur Product Size..........................
 
-    const [selectedimg, setSelectedimg] = useState(imagess[1])
-    console.log(selectedimg)
+    const [selectedimg, setSelectedimg] = useState(imagess[0])
 
     console.log(imagess[0])
+
 
     if (!product) {
         return <p className='lodding'>Lodding................</p>
@@ -77,11 +80,11 @@ const Details = () => {
             <div className='row mt-5 mb-5'>
                 <div className='col-lg-6 col-sm-12'>
                     <div className='container-imagess'>
-                        <img src={selectedimg} alt="" className='slected' />
+                        <img src={selectedimg || imagess[0]} alt="" className='slected' />
 
                         <div className='imagecontainer'>
                             {
-                                imagess?.map((img, index) => <img key={index}
+                                imagess.map((img, index) => <img key={index}
                                     src={img}
                                     alt="dog"
                                     onClick={() => setSelectedimg(img)}
@@ -121,9 +124,9 @@ const Details = () => {
                     <button onClick={() => handeladdToCard(product)} className='details-add-to'>Add to cart</button>
 
                     <div className='Description mt-5'>
-                        <p>
+                        <small className='Description'>
                             {product?.Description}
-                        </p>
+                        </small>
                     </div>
 
                 </div>

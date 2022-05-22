@@ -51,7 +51,7 @@ const NavBar = () => {
           ) : ( */}
           <li className="nav-item">
             <NavLink
-              to="/"
+              to="/MyOrder"
               activeClassName="active"
               className="nav-links"
               onClick={handleClick}

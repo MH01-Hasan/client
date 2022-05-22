@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Ultra_Boost = () => {
+const UltraBoost = () => {
   const [Ultra_Boost, setUltra_Boost] = useState([]);
   console.log(Ultra_Boost);
 
@@ -17,4 +17,4 @@ const Ultra_Boost = () => {
   return <div></div>;
 };
 
-export default Ultra_Boost;
+export default UltraBoost;
