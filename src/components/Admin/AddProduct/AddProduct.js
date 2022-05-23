@@ -207,7 +207,7 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="container mt-5 upload-fild mb-5">
+    <div className="mt-5 upload-fild mb-5">
       <div className="row">
         <div className="image-Upload col-lg-5 col-sm-12">
           <div className="uploder-image">

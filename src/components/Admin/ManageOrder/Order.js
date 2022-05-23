@@ -44,11 +44,9 @@ const Order = () => {
                             <div className='hospital-info'>
 
                                 <div>
-                                    <p> <HiLocationMarker />1234 North Avenue Luke,
-
-                                        South Bend,IN 360001</p>
-                                    <p><HiPhoneMissedCall />+8801629094984</p>
-                                    <p> <HiMail />support@gmail.com</p>
+                                    <p> <HiLocationMarker />Al Jabeer Building 301, Al Jurf 3, Ajman</p>
+                                    <p><HiPhoneMissedCall />+9710568775565</p>
+                                    <p> <HiMail />mrisiddik9@gmail.com</p>
                                 </div>
 
                             </div>
