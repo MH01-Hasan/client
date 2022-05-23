@@ -16,7 +16,7 @@ const ManageOrder = () => {
 
 
     return (
-        <div className=' container order-fild mt-5'>
+        <div className='order-fild mt-5'>
             <div>
                 <div>
                     <Table responsive="sm md xl table-fild">

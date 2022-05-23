@@ -1,0 +1,21 @@
+.menu-list {
+    border-right: 1px solid #808080;
+}
+
+.menu-list ul {
+    list-style-type: none;
+}
+
+.menu-list ul li {
+    font-size: 17px;
+    margin-top: 19px;
+}
+
+.nav-link-dashbord {
+    color: #393535;
+    font-family: 'Josefin Slab';
+}
+
+.nav-link-dashbord:hover {
+    border: none;
+}

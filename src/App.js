@@ -31,6 +31,7 @@ import Wallet from "./components/UserSite/Catagory/Wallet";
 import Watch from "./components/UserSite/Catagory/Watch";
 import UltraBoost from "./components/UserSite/Catagory/UltraBoost";
 import MyOrder from "./components/UserSite/MyOrder/MyOrder";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -43,7 +44,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/AddProduct" element={<AddProduct />} />
             <Route path="/product" element={<HomeProduct />} />
             {/* <Route path="/" element={<AdminRoute />}> */}
             <Route
@@ -58,9 +58,14 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/details/:id" element={<Details />} />
             <Route path="/Shiping" element={<Shiping />} />
-            <Route path="/ManageOrder" element={<ManageOrder />} />
             <Route path="/Order/:id" element={<Order />} />
+
+
+            <Route path="/AddProduct" element={<AddProduct />} />
+            <Route path="/ManageOrder" element={<ManageOrder />} />
             <Route path="/ManageProduct" element={<ManageProduct />} />
+
+
             <Route path="product/catagory/AirJorden" element={<AirJorden />} />
             <Route path="product/catagory/AirForce" element={<AirForce />} />
             <Route path="product/catagory/AirMax" element={<AirMax />} />
@@ -92,6 +97,12 @@ function App() {
             <Route path="/Information" element={<Information />} />
             <Route path="/Timer" element={<Timer />} />
             <Route path="/MyOrder" element={<MyOrder />} />
+
+            <Route path="/dashboard/*" element={<Dashboard />} />
+
+
+
+
           </Routes>
           <Footer />
         </Router>

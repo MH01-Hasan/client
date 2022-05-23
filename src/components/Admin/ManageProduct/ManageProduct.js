@@ -18,7 +18,7 @@ const ManageProduct = () => {
 
 
     return (
-        <div className='container'>
+        <div>
             <Table responsive="sm md xl">
                 <thead>
                     <tr>
