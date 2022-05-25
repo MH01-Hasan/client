@@ -38,7 +38,7 @@ const HomeProduct = () => {
             <div className='row mt-5 catagory-fild'>
                 <h3>Hottest Nike Collections🏃</h3>
                 <div className="mt-3 home-catagory">
-                    <Link to="product/catagory/AirJorden"  >
+                    <Link to="product/catagory/AirForce"  >
                         <div className="link-info-fild">
                             <img src={catagory1} alt="" />
                             <p>Air Force</p>
@@ -46,7 +46,7 @@ const HomeProduct = () => {
                     </Link>
                 </div>
                 <div className="mt-3 home-catagory" >
-                    <Link to="product/catagory/AirForce">
+                    <Link to="product/catagory/AirJorden">
                         <div className="link-info-fild">
                             <img src={catagory2} alt="" />
                             <p>Air Jorden</p>
@@ -78,7 +78,7 @@ const HomeProduct = () => {
                 <h2>Trending Now🔥 Adidas</h2>
                 <div className='row mt-5 catagory-fild'>
                     <div className="mt-3 home-catagory">
-                        <Link to="product/catagory/AirJorden"  >
+                        <Link to="product/catagory/Yeezy_350_v2"  >
                             <div className="link-info-fild">
                                 <img src={Addi1} alt="" />
                                 <p>Yeezy_350_v2</p>
@@ -86,7 +86,7 @@ const HomeProduct = () => {
                         </Link>
                     </div>
                     <div className="mt-3 home-catagory" >
-                        <Link to="product/catagory/AirForce">
+                        <Link to="product/catagory/Yeezy500">
                             <div className="link-info-fild">
                                 <img src={Add2} alt="" />
                                 <p>Yeezy_500</p>
@@ -95,7 +95,7 @@ const HomeProduct = () => {
 
                     </div>
                     <div className=" mt-3 home-catagory" >
-                        <Link to="product/catagory/AirMax">
+                        <Link to="product/catagory/UltraBoost">
                             <div className="link-info-fild">
                                 <img src={Add3} alt="" />
                                 <p>Ultra Boost</p>
@@ -104,7 +104,7 @@ const HomeProduct = () => {
 
                     </div>
                     <div className=" mt-3 home-catagory" >
-                        <Link to="product/catagory/Dunk">
+                        <Link to="product/catagory/Yeezy700">
                             <div className="link-info-fild">
                                 <img src={Add4} alt="" />
                                 <p>Yeezy_700</p>
@@ -146,7 +146,7 @@ const HomeProduct = () => {
 
                             </div>
                             <div className="secend-image">
-                                <Link to="/">
+                                <Link to="/product/catagory/Watch">
                                     <div className="contaner">
                                         <img src={watch} alt="" />
                                     </div>
@@ -162,7 +162,7 @@ const HomeProduct = () => {
                     <div className="third-dection">
                         <div className="row others-part-one">
                             <div className="third-first-image ">
-                                <Link to="/product/catagory/LadiesBag">
+                                <Link to="/product/catagory/Wallet">
                                     <div>
                                         <img src={walate} alt="" className="ladisbag-image" />
                                     </div>
@@ -171,7 +171,7 @@ const HomeProduct = () => {
 
                             </div>
                             <div className="third-secend-image">
-                                <Link to="/">
+                                <Link to="/product/catagory/Others">
                                     <div className="contaner">
                                         <img src={Others} alt="" />
                                     </div>

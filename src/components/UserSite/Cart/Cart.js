@@ -136,7 +136,7 @@ const Cart = () => {
                 <span className="total">SubTotal</span>
                 <span className="amount">AED {cart.cardTotalAmount}</span>
               </div>
-              <p>Taxes and shipping calculated at checkout</p>
+              <p className="p-cart">Taxes and shipping calculated at checkout</p>
               <Link to="/Shiping">
                 <button className="chk-out">Check out</button>
               </Link>

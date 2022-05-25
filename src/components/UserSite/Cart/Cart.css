@@ -195,30 +195,35 @@
     }
 
     .chk-out {
-        font-size: 30px;
-        padding: 10px 73px;
+        font-size: 20px;
+        padding: 1px 85px;
     }
+
 
     .subtotal {
         margin-right: -7px;
     }
 
     .total {
-        font-size: 24px;
+        font-size: 16px;
     }
 
     .amount {
-        font-size: 24px;
+        font-size: 16px;
     }
 
     .clear {
-        font-size: 23px;
+        font-size: 13px;
         background-color: #d44e4e;
-        padding: 7px 16px px;
+        padding: 5px 18px;
+    }
+
+    .p-cart {
+        font-size: 16px;
     }
 
     .continue-shopping {
-        font-size: 30px;
+        font-size: 20px;
         margin-top: 12px;
         margin-bottom: 92px;
     }

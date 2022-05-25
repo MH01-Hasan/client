@@ -79,7 +79,7 @@ const Details = () => {
         <div className='container'>
             <div className='row mt-5 mb-5'>
                 <div className='col-lg-6 col-sm-12'>
-                    <div className='container-imagess'>
+                    <div className='details-imagess'>
                         <img src={selectedimg || imagess[0]} alt="" className='slected' />
 
                         <div className='imagecontainer'>
@@ -100,6 +100,7 @@ const Details = () => {
                     <p>Brand : {product?.Brand_Name}</p>
                     <h1 className='details-name'>{product?.Product_Name}</h1>
                     <h5 className='price-details'>{`Price: AED ${product.price}`}</h5>
+
                     <div>
                         <h5 className='Size'>Size</h5>
 
