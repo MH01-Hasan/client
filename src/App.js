@@ -32,6 +32,9 @@ import Watch from "./components/UserSite/Catagory/Watch";
 import UltraBoost from "./components/UserSite/Catagory/UltraBoost";
 import MyOrder from "./components/UserSite/MyOrder/MyOrder";
 import Dashboard from "./components/Dashboard/Dashboard";
+import Yeezy350v2 from "./components/UserSite/Catagory/Yeezy350v2";
+import Yeezy700 from "./components/UserSite/Catagory/Yeezy700";
+import Yeezy500 from "./components/UserSite/Catagory/Yeezy500";
 
 function App() {
   return (
@@ -66,23 +69,26 @@ function App() {
             <Route path="/ManageProduct" element={<ManageProduct />} />
 
 
-            <Route path="product/catagory/AirJorden" element={<AirJorden />} />
             <Route path="product/catagory/AirForce" element={<AirForce />} />
+            <Route path="product/catagory/AirJorden" element={<AirJorden />} />
             <Route path="product/catagory/AirMax" element={<AirMax />} />
+            <Route path="product/catagory/Dunk" element={<Dunk />} />
+
 
             <Route path="product/catagory/Designers_Shoes" element={<DesignersShoes />} />
 
-            <Route path="product/catagory/Dunk" element={<Dunk />} />
 
             <Route path="product/catagory/LadiesBag" element={<LadiesBag />} />
-
+            <Route path="product/catagory/Watch" element={<Watch />} />
+            <Route path="product/catagory/Wallet" element={<Wallet />} />
             <Route path="product/catagory/Others" element={<Others />} />
 
-            <Route path="product/catagory/Wallet" element={<Wallet />} />
 
-            <Route path="product/catagory/Watch" element={<Watch />} />
 
+            <Route path="product/catagory/Yeezy_350_v2" element={<Yeezy350v2 />} />
+            <Route path="product/catagory/Yeezy500" element={<Yeezy500 />} />
             <Route path="product/catagory/UltraBoost" element={<UltraBoost />} />
+            <Route path="product/catagory/Yeezy700" element={<Yeezy700 />} />
 
             {/* <Route path="/" element={<PrivateRoute />}> */}
             <Route

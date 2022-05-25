@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const Watch = () => {
-  const [Watch, setWatch] = useState([]);
-
-
+const Yeezy500 = () => {
+  const [Yeezy_500, setYeezy_500] = useState([]);
   useEffect(() => {
     fetch("http://localhost:5000/Product")
       .then((res) => res.json())
       .then((data) => {
-        const Watch = data?.filter((Watch) => Watch?.Catagory === "Watch");
-        setWatch(Watch);
+        const Yeezy_500 = data?.filter(
+          (Yeezy_500) => Yeezy_500?.Catagory === "Yeezy_500"
+        );
+        setYeezy_500(Yeezy_500);
       });
   }, []);
   return <div className='mx-5 mt-5 mb-5'>
     <div className='row home-content-product'>
       {
-        Watch?.map(product => <div className=' show-product-air' key={product._id}>
+        Yeezy_500?.map(product => <div className=' show-product-air' key={product._id}>
           <div className='image-fild'>
             <img src={product?.image} alt="" className='image-show' />
           </div>
@@ -44,4 +44,4 @@ const Watch = () => {
   </div>;
 };
 
-export default Watch;
+export default Yeezy500;

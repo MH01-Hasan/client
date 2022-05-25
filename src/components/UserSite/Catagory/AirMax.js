@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const AirMax = () => {
@@ -17,27 +16,27 @@ const AirMax = () => {
       });
   }, []);
   return (
-    <div className='container mb-5'>
-      <div className='row'>
+    <div className='mx-5 mt-5 mb-5'>
+      <div className='row home-content-product'>
         {
-          Air_Max?.map(product => <div className='col-lg-3 col-md-4 col-sm-6' key={product._id}>
-            <Card className='cart-fild mt-5'>
-              <Card.Img src={product?.image} className='image-card' />
+          Air_Max?.map(product => <div className=' show-product-air' key={product._id}>
+            <div className='image-fild'>
+              <img src={product?.image} alt="" className='image-show' />
+            </div>
 
-              <Card.Body>
-                <Card.Title className='product-name' >{product.Product_Name}</Card.Title>
+            <div className='home-product-info'>
+              <div className='product-content-info'>
+                <h4>{product.Product_Name}</h4>
                 <h6>{product.Model}</h6>
-                <p className='price-card'> Price : {product.price} AED</p>
-                <div className='add-footer'>
-
+                <p>Price : AED  {product.price}</p>
+                <div className='link-product'>
                   <Link to={`/details/${product._id}`} className='details-link'>
                     Veiw More
                   </Link>
-
                 </div>
-              </Card.Body>
+              </div>
+            </div>
 
-            </Card>
           </div>)
 
         }
@@ -46,6 +45,7 @@ const AirMax = () => {
 
 
     </div>
+
   );
 };
 
