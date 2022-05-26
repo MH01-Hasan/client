@@ -62,32 +62,30 @@ function App() {
             <Route path="/details/:id" element={<Details />} />
             <Route path="/Shiping" element={<Shiping />} />
             <Route path="/Order/:id" element={<Order />} />
-
-
             <Route path="/AddProduct" element={<AddProduct />} />
             <Route path="/ManageOrder" element={<ManageOrder />} />
             <Route path="/ManageProduct" element={<ManageProduct />} />
-
-
             <Route path="product/catagory/AirForce" element={<AirForce />} />
             <Route path="product/catagory/AirJorden" element={<AirJorden />} />
             <Route path="product/catagory/AirMax" element={<AirMax />} />
             <Route path="product/catagory/Dunk" element={<Dunk />} />
-
-
-            <Route path="product/catagory/Designers_Shoes" element={<DesignersShoes />} />
-
-
+            <Route
+              path="product/catagory/Designers_Shoes"
+              element={<DesignersShoes />}
+            />
             <Route path="product/catagory/LadiesBag" element={<LadiesBag />} />
             <Route path="product/catagory/Watch" element={<Watch />} />
             <Route path="product/catagory/Wallet" element={<Wallet />} />
             <Route path="product/catagory/Others" element={<Others />} />
-
-
-
-            <Route path="product/catagory/Yeezy_350_v2" element={<Yeezy350v2 />} />
+            <Route
+              path="product/catagory/Yeezy_350_v2"
+              element={<Yeezy350v2 />}
+            />
             <Route path="product/catagory/Yeezy500" element={<Yeezy500 />} />
-            <Route path="product/catagory/UltraBoost" element={<UltraBoost />} />
+            <Route
+              path="product/catagory/UltraBoost"
+              element={<UltraBoost />}
+            />
             <Route path="product/catagory/Yeezy700" element={<Yeezy700 />} />
 
             {/* <Route path="/" element={<PrivateRoute />}> */}
@@ -103,12 +101,7 @@ function App() {
             <Route path="/Information" element={<Information />} />
             <Route path="/Timer" element={<Timer />} />
             <Route path="/MyOrder" element={<MyOrder />} />
-
             <Route path="/dashboard/*" element={<Dashboard />} />
-
-
-
-
           </Routes>
           <Footer />
         </Router>
