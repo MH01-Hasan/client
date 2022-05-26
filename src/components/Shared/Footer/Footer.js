@@ -7,7 +7,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaMapMarkerAlt,
-  FaPaperPlane,
+  // FaPaperPlane,
   FaPhone,
   FaTwitter,
 } from "react-icons/fa";
@@ -120,28 +120,8 @@ const Footer = () => {
             </div>
             <ul className="working">
               <li>
-                <span>Monday</span>
+                <span>Monday-Saturday</span>
                 <span>9:00 - 20:00</span>
-              </li>
-              <li>
-                <span>Tuesday</span>
-                <span>9:00 - 20:00</span>
-              </li>
-              <li>
-                <span>Wednesday</span>
-                <span>9:00 - 20:00</span>
-              </li>
-              <li>
-                <span>Thursday</span>
-                <span>9:00 - 20:00</span>
-              </li>
-              <li>
-                <span>Friday</span>
-                <span>9:00 - 20:00</span>
-              </li>
-              <li>
-                <span>Saturday</span>
-                <span>10:00 - 18:00</span>
               </li>
               <li>
                 <span>Sunday</span>

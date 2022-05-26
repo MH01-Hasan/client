@@ -7,7 +7,7 @@ import { Nav } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { BiCart } from "react-icons/bi";
 const NavBar = () => {
-  const { user, logOut } = useAuth(); // admin,
+  const { user, admin, logOut } = useAuth();
 
   const [click, setClick] = useState(false);
 
@@ -36,10 +36,10 @@ const NavBar = () => {
               Home
             </NavLink>
           </li>
-          {/* {admin === true ? (
+          {admin === true ? (
             <li className="nav-item">
               <NavLink
-                to="/admindashboard"
+                to="/dashboard"
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
@@ -48,19 +48,19 @@ const NavBar = () => {
                 Dashboard
               </NavLink>
             </li>
-          ) : ( */}
-          <li className="nav-item">
-            <NavLink
-              to="/MyOrder"
-              activeClassName="active"
-              className="nav-links"
-              onClick={handleClick}
-              className="menu-name"
-            >
-              My Order
-            </NavLink>
-          </li>
-          {/* )} */}
+          ) : (
+            <li className="nav-item">
+              <NavLink
+                to="/MyOrder"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+                className="menu-name"
+              >
+                My Order
+              </NavLink>
+            </li>
+          )}
           <li className="nav-item">
             <NavLink
               exact
@@ -89,7 +89,7 @@ const NavBar = () => {
               </Nav.Link>
             )}
           </li>
-          <li className="user-name ml-2 mb-2">{user?.displayName}</li>
+          <li className="user-name mb-2">{user?.displayName}</li>
         </ul>
         <div className="nav-icon " onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
