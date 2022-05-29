@@ -5,18 +5,17 @@ import AddProduct from "./components/Admin/AddProduct/AddProduct";
 import Cart from "./components/UserSite/Cart/Cart";
 import Details from "./components/UserSite/Details/Details";
 import Shiping from "./components/UserSite/Shiping/Shiping";
-import Information from "./components/UserSite/Information/Information";
 import Login from "./components/Login/Login/Login";
 import Register from "./components/Login/Register/Register";
 import NavBar from "./components/Shared/NavBar/NavBar";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import ManageOrder from "./components/Admin/ManageOrder/ManageOrder";
 import Order from "./components/Admin/ManageOrder/Order";
-// import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
+import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
 import HomeProduct from "./components/UserSite/HomeProduct/HomeProduct";
 import MakeAdmin from "./components/Admin/MakeAdmin/MakeAdmin";
-// import AdminRoute from "./components/Login/AdminRoute/AdminRoute";
-import Timer from "./components/Admin/Timer/Timer";
+import AdminRoute from "./components/Login/AdminRoute/AdminRoute";
+
 import Footer from "./components/Shared/Footer/Footer";
 import NotFound from "./components/Shared/NotFound/NotFound";
 import ManageProduct from "./components/Admin/ManageProduct/ManageProduct";
@@ -35,6 +34,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import Yeezy350v2 from "./components/UserSite/Catagory/Yeezy350v2";
 import Yeezy700 from "./components/UserSite/Catagory/Yeezy700";
 import Yeezy500 from "./components/UserSite/Catagory/Yeezy500";
+import Delevery from "./components/Admin/Delevery/Delevery";
 
 function App() {
   return (
@@ -48,23 +48,22 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/product" element={<HomeProduct />} />
-            {/* <Route path="/" element={<AdminRoute />}> */}
-            <Route
-              path="/makeadmin"
-              element={
-                // <AdminRoute>
-                <MakeAdmin />
-                // </AdminRoute>
-              }
-            />
-            {/* </Route> */}
+
+
             <Route path="/cart" element={<Cart />} />
             <Route path="/details/:id" element={<Details />} />
             <Route path="/Shiping" element={<Shiping />} />
+
             <Route path="/Order/:id" element={<Order />} />
+
+            {/* <Route path="/makeadmin" element={ <MakeAdmin />}/>
             <Route path="/AddProduct" element={<AddProduct />} />
             <Route path="/ManageOrder" element={<ManageOrder />} />
             <Route path="/ManageProduct" element={<ManageProduct />} />
+            <Route path="/Delivery" element={<Delevery />} /> */}
+
+
+
             <Route path="product/catagory/AirForce" element={<AirForce />} />
             <Route path="product/catagory/AirJorden" element={<AirJorden />} />
             <Route path="product/catagory/AirMax" element={<AirMax />} />
@@ -88,20 +87,25 @@ function App() {
             />
             <Route path="product/catagory/Yeezy700" element={<Yeezy700 />} />
 
-            {/* <Route path="/" element={<PrivateRoute />}> */}
             <Route
-              path="/Shiping"
+              path="/information"
               element={
                 // <PrivateRoute>
                 <Shiping />
-                // </PrivateRoute>
+                /* </PrivateRoute> */
               }
             />
-            {/* </Route> */}
-            <Route path="/Information" element={<Information />} />
-            <Route path="/Timer" element={<Timer />} />
+
+
+
             <Route path="/MyOrder" element={<MyOrder />} />
-            <Route path="/dashboard/*" element={<Dashboard />} />
+            <Route path="/dashboard/*" element={
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>
+
+            } />
+
           </Routes>
           <Footer />
         </Router>

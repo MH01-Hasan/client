@@ -1,8 +1,10 @@
 .make-admin-form {
   padding: 25px 50px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  box-shadow: rgb(0 0 0 / 28%) 0px 7px 24px 6px;
   border-radius: 10px;
   margin-bottom: 50px;
+  width: 668px;
+  margin-top: 15px;
 }
 
 .make-admin-container {

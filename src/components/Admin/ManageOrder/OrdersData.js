@@ -6,7 +6,6 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 
 const OrdersData = ({ order, index, setlodding }) => {
-    console.log(order)
     const { _id, Date, Status, Shipinginfo, } = order;
 
     const handleProcessing = (id) => {
@@ -49,7 +48,7 @@ const OrdersData = ({ order, index, setlodding }) => {
             <td>{Date?.date}</td>
             <td>{Shipinginfo?.data?.firstName} {Shipinginfo?.data?.lastName}</td>
             <td>{Shipinginfo?.data?.Phone}</td>
-            <td>Table cell</td>
+
             <td>
                 <Link to={`/Order/${_id}`}>
                     {_id}

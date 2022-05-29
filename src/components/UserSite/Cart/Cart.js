@@ -42,7 +42,7 @@ const Cart = () => {
 
   return (
     <div>
-      <h1 className="shoping">Shopinng Cart</h1>
+      <h1 className="shoping">Shopping Cart</h1>
       {cart.cardItem.length === 0 ? (
         <div className="cart-empty">
           <p>Your cart is currently empty</p>
@@ -88,7 +88,7 @@ const Cart = () => {
                           onClick={() => handelremovecart(cartItem)}
                           className="remove"
                         >
-                          Remobe
+                          Remove
                         </button>
                       </div>
                     </div>
@@ -116,7 +116,7 @@ const Cart = () => {
                   </td>
                   <td>
                     <div className="child3  ">
-                      AED {cartItem.price * cartItem.cartQuantity}
+                      AED {cartItem.price * cartItem.cartQuantity}.00
                     </div>
                   </td>
                 </tr>
@@ -134,15 +134,15 @@ const Cart = () => {
             <div className="cart-checkout">
               <div className="subtotal">
                 <span className="total">SubTotal</span>
-                <span className="amount">AED {cart.cardTotalAmount}</span>
+                <span className="amount">AED {cart.cardTotalAmount}.00</span>
               </div>
-              <p className="p-cart">Taxes and shipping calculated at checkout</p>
-              <Link to="/Shiping">
+              <p className="p-cart">Tax and shipping calculated at checkout</p>
+              <Link to="/information">
                 <button className="chk-out">Check out</button>
               </Link>
 
               <div className="continue-shopping">
-                <Link to="/product">
+                <Link to="/">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"

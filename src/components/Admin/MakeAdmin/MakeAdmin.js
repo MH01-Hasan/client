@@ -59,7 +59,7 @@ const MakeAdmin = () => {
             variant="standard"
           />{" "}
           <br />
-          <Button className="mt-3" type="submit" variant="contained">
+          <Button className="mt-5" type="submit" variant="contained">
             Make Admin
           </Button>
         </form>

@@ -93,3 +93,22 @@
 .status-change-btn {
     text-align: end;
 }
+
+.search-medicen {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.search-option {
+    width: 352px;
+    height: 34px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ee7805;
+}
+
+.company-info {
+    margin-bottom: 1px;
+    font-size: 15px;
+}

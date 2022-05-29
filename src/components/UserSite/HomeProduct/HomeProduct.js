@@ -38,7 +38,7 @@ const HomeProduct = () => {
             <div className='row mt-5 catagory-fild'>
                 <h3>Hottest Nike Collections🏃</h3>
                 <div className="mt-3 home-catagory">
-                    <Link to="product/catagory/AirForce"  >
+                    <Link to="product/catagory/AirForce" className="home-link" >
                         <div className="link-info-fild">
                             <img src={catagory1} alt="" />
                             <p>Air Force</p>
@@ -46,7 +46,7 @@ const HomeProduct = () => {
                     </Link>
                 </div>
                 <div className="mt-3 home-catagory" >
-                    <Link to="product/catagory/AirJorden">
+                    <Link to="product/catagory/AirJorden" className="home-link">
                         <div className="link-info-fild">
                             <img src={catagory2} alt="" />
                             <p>Air Jorden</p>
@@ -55,7 +55,7 @@ const HomeProduct = () => {
 
                 </div>
                 <div className=" mt-3 home-catagory" >
-                    <Link to="product/catagory/AirMax">
+                    <Link to="product/catagory/AirMax" className="home-link">
                         <div className="link-info-fild">
                             <img src={catagory3} alt="" />
                             <p>Air Max</p>
@@ -63,8 +63,8 @@ const HomeProduct = () => {
                     </Link>
 
                 </div>
-                <div className=" mt-3 home-catagory" >
-                    <Link to="product/catagory/Dunk">
+                <div className=" mt-3 home-catagory">
+                    <Link to="product/catagory/Dunk" className="home-link">
                         <div className="link-info-fild">
                             <img src={catagory4} alt="" />
                             <p>Dunk</p>
@@ -78,7 +78,7 @@ const HomeProduct = () => {
                 <h2>Trending Now🔥 Adidas</h2>
                 <div className='row mt-5 catagory-fild'>
                     <div className="mt-3 home-catagory">
-                        <Link to="product/catagory/Yeezy_350_v2"  >
+                        <Link to="product/catagory/Yeezy_350_v2" className="home-link" >
                             <div className="link-info-fild">
                                 <img src={Addi1} alt="" />
                                 <p>Yeezy_350_v2</p>
@@ -86,7 +86,7 @@ const HomeProduct = () => {
                         </Link>
                     </div>
                     <div className="mt-3 home-catagory" >
-                        <Link to="product/catagory/Yeezy500">
+                        <Link to="product/catagory/Yeezy500" className="home-link">
                             <div className="link-info-fild">
                                 <img src={Add2} alt="" />
                                 <p>Yeezy_500</p>
@@ -95,7 +95,7 @@ const HomeProduct = () => {
 
                     </div>
                     <div className=" mt-3 home-catagory" >
-                        <Link to="product/catagory/UltraBoost">
+                        <Link to="product/catagory/UltraBoost" className="home-link">
                             <div className="link-info-fild">
                                 <img src={Add3} alt="" />
                                 <p>Ultra Boost</p>
@@ -104,7 +104,7 @@ const HomeProduct = () => {
 
                     </div>
                     <div className=" mt-3 home-catagory" >
-                        <Link to="product/catagory/Yeezy700">
+                        <Link to="product/catagory/Yeezy700" className="home-link">
                             <div className="link-info-fild">
                                 <img src={Add4} alt="" />
                                 <p>Yeezy_700</p>
@@ -132,12 +132,12 @@ const HomeProduct = () => {
             </div>
 
             <div className="Others-section mt-5">
-                <h1 className="mt-5 mb-3">Accossoris</h1>
+                <h1 className="mt-5 mb-5 px-5">Accessories </h1>
                 <div className="row">
                     <div className="walate col-lg-12 col-sm-12">
                         <div className="row others-part-one">
                             <div className="first-image ">
-                                <Link to="/product/catagory/LadiesBag">
+                                <Link to="/product/catagory/LadiesBag" className="LadiesBag">
                                     <div>
                                         <img src={ladisbag} alt="" className="ladisbag-image" />
                                     </div>
