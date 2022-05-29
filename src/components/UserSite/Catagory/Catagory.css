@@ -51,6 +51,7 @@
     border-top: 1px solid #808080;
     background-color: #deb887;
     font-family: math;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 844px) {
@@ -80,7 +81,4 @@
         margin-top: 11px;
         margin-bottom: 0;
     }
-
-
-    .details-link {}
 }

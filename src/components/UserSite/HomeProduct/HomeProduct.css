@@ -1,26 +1,9 @@
-/* .cart-fild {
-    border: none;
-    background-color: #dbe1e642;
-    padding: 6px;
-    font-family: serif;
-    height: 362px;
-}
-
-.image-card {
-    height: 230px;
-    width: 100%;
-}
-
-.details-link {
-    background-color: #e17e7e;
-    padding: 7px 35px;
-    border-radius: 3px;
-    color: #fff;
-    text-decoration: none !important
-} */
-
 .product-name {
     font-size: 15px;
+}
+
+.home-link {
+    text-decoration: none;
 }
 
 .catagory-fild {
@@ -43,7 +26,7 @@
 }
 
 .home-catagory p {
-    font-size: 22px;
+    font-size: 14px;
     text-align: center;
     margin-top: 10px;
     letter-spacing: 2px;
@@ -51,7 +34,7 @@
 
 }
 
-.thard-contaent {}
+
 
 .thard-contaent img {
     width: 100%;
@@ -110,6 +93,10 @@
     padding: 0;
 }
 
+.LadiesBag:hover {
+    background-color: #5c5151e6;
+}
+
 
 @media screen and (max-width: 844px) {
     .catagory-fild {
@@ -119,12 +106,12 @@
     }
 
     .home-catagory {
-        width: 47%;
+        width: 45%;
         background-color: #f6f6f6;
-        margin-left: 10px;
+        margin-left: 16px;
         border-radius: 5px;
         padding: 1px;
-        height: 220px;
+        height: 207px;
     }
 
     .home-catagory img {

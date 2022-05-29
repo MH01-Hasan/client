@@ -44,9 +44,9 @@ const Order = () => {
                             <div className='hospital-info'>
 
                                 <div>
-                                    <p> <HiLocationMarker />Al Jabeer Building 301, Al Jurf 3, Ajman</p>
-                                    <p><HiPhoneMissedCall />+9710568775565</p>
-                                    <p> <HiMail />mrisiddik9@gmail.com</p>
+                                    <p className='company-info'> <HiLocationMarker /> Al Jabeer Building 301, Al Jurf 3, Ajman</p>
+                                    <p className='company-info'><HiPhoneMissedCall /> +9710568775565</p>
+                                    <p className='company-info'> <HiMail /> mrisiddik9@gmail.com</p>
                                 </div>
 
                             </div>

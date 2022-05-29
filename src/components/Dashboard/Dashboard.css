@@ -19,3 +19,54 @@
 .nav-link-dashbord:hover {
     border: none;
 }
+
+.Admin-home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card-home {
+
+    width: 318px;
+    padding: 10px;
+    height: 135px;
+    border-radius: 6px;
+}
+
+.card-home.Pending {
+    background-image: linear-gradient(to right, #0b748e, #6896c2, #0c3b5ec7);
+    color: #fff;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-home.Processing {
+    background-image: linear-gradient(to right, #071e05d4, #0a4505b0, #1a313fd4);
+    color: #fff;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-home.Delivery {
+    background-image: linear-gradient(to right, #281e27d4, #a74e4e, #676c87e6);
+    color: #fff;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Pending-length {
+    font-size: 22px;
+    margin-right: 2px;
+    background-color: #035e7fcc;
+    width: 15%;
+    height: 39%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 1px 4px 1px white;
+}

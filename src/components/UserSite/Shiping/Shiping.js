@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
 
 
 const Shiping = () => {
-    const { user, logOut } = useAuth();
+    const { user } = useAuth();
     const cart = useSelector((state) => state.cart);
     const [data, setData] = useState({})
 
@@ -32,8 +32,8 @@ const Shiping = () => {
     const total = Number(cart?.cardTotalAmount) + Number(radioValue)
 
     const radios = [
-        { name: '	UAE-2-4 DAYS Delivery', value: '25' },
-        { name: 'WESTERN REGION/HATTA/ISLAND (2-4 Days)', value: '50' },
+        { name: '	UAE-2-4 days Delivery', value: '25' },
+        { name: 'WESTERN REGION/HATTA/ISLAND (2-4 days)', value: '50' },
 
     ];
     const dispatch = useDispatch()
@@ -58,9 +58,9 @@ const Shiping = () => {
                 if (res.data.insertedId) {
                     dispatch(crealecart())
                     Swal.fire({
-                        position: 'top-end',
+                        position: 'center',
                         icon: 'success',
-                        title: 'Your Order has been success',
+                        title: 'Your Order Has Been Success',
                         showConfirmButton: false,
                         timer: 2500
                     })
@@ -83,7 +83,7 @@ const Shiping = () => {
                             !step && <form onSubmit={handleSubmit(onSubmit)}>
                                 <div>
                                     <h4 className='Contact-information'>Contact information</h4>
-                                    <input type='email' {...register("email")} placeholder='Email' required={true} className='Country' />
+                                    <input type='email' {...register("email")} placeholder=' Email' required={true} className='Country' />
                                     <br />
 
                                     <div className='check-box'>
@@ -159,7 +159,7 @@ const Shiping = () => {
                                 </div>
 
                                 <div className='Shipping-method'>
-                                    <h4 className='method'>Shipping method</h4>
+                                    <h4 className='method'>Delivery Method</h4>
 
                                     <div>
                                         <div >
@@ -194,7 +194,7 @@ const Shiping = () => {
                                 <div className='payment'>
                                     <h4>Payment </h4>
                                     <p>All transactions are secure and encrypted.</p>
-                                    <p className='Cash-on-delevery'>Cash on Delivery (COD)</p>
+                                    <p className='Cash-on-delevery'>Cash On Delivery (COD)</p>
 
 
                                 </div>
@@ -245,7 +245,7 @@ const Shiping = () => {
                                         <div className="">{cartItem.cartQuantity}</div>
 
                                     </div></td>
-                                    <td><div className="c  ">
+                                    <td><div className="c">
                                         AED {cartItem.price * cartItem.cartQuantity}
                                     </div></td>
                                 </tr>
@@ -254,7 +254,7 @@ const Shiping = () => {
                         </tbody>
                     </Table>
                     <div className="check-out-subtotal">
-                        <h6 className='total-Amount-text'>Shiping</h6>
+                        <h6 className='total-Amount-text'>Delivery Cost</h6>
                         <h6 className="amount-Text">
                             AED {
                                 `${radioValue}.00`

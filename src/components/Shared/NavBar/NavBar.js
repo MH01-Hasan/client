@@ -18,7 +18,7 @@ const NavBar = () => {
     <nav className="navbar">
       <div className="nav-container">
         <NavLink exact to="/" className=" pb-2 nav-logo text-left d-flex">
-          <div className="nav-name">EmiratLifeStyle</div>
+          <div className="nav-name">Emirat LifeStyles</div>
         </NavLink>
         <ul
           id="item-container"

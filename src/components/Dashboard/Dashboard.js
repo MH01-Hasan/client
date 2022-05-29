@@ -8,7 +8,9 @@ import './Dashboard.css'
 import { AiOutlineHome, AiOutlineAppstoreAdd, AiOutlineUsergroupAdd } from "react-icons/ai";
 import { RiProductHuntLine } from "react-icons/ri";
 import { MdAddTask, MdOutlineLocalOffer } from "react-icons/md";
-import { GrDocumentStore } from "react-icons/gr";
+import { GrDocumentStore, GrUserAdmin } from "react-icons/gr";
+import Delevery from "../Admin/Delevery/Delevery";
+import MakeAdmin from "../Admin/MakeAdmin/MakeAdmin";
 
 const Dashboard = () => {
 
@@ -26,10 +28,11 @@ const Dashboard = () => {
                         <li><Link className="nav-link-dashbord" to="AddProduct"> <AiOutlineAppstoreAdd />  AddProduct </Link></li>
                         <li><Link className="nav-link-dashbord" to="ManageOrder"><GrDocumentStore /> ManageOrder </Link></li>
                         <li><Link className="nav-link-dashbord" to="ManageProduct"><RiProductHuntLine />  ManageProduct </Link></li>
-                        <li><Link className="nav-link-dashbord" to="Delevery"><MdAddTask />  Delevery </Link></li>
+                        <li><Link className="nav-link-dashbord" to="Delivery"><MdAddTask />  Delivery </Link></li>
                         <hr />
                         <li><Link className="nav-link-dashbord" to="HotOffer"><MdOutlineLocalOffer /> Hot Offer </Link></li>
-                        <li><Link className="nav-link-dashbord" to="Costomers"><AiOutlineUsergroupAdd />Costomers </Link></li>
+                        <li><Link className="nav-link-dashbord" to="Customers"><AiOutlineUsergroupAdd /> Customers </Link></li>
+                        <li><Link className="nav-link-dashbord" to="MakeAdmin"><GrUserAdmin /> Make Admin </Link></li>
                     </ul>
                 </div>
                 <div className="col-lg-10">
@@ -38,7 +41,8 @@ const Dashboard = () => {
                         <Route path="AddProduct" element={<AddProduct />} />
                         <Route path="ManageOrder" element={<ManageOrder />} />
                         <Route path="ManageProduct" element={<ManageProduct />} />
-                        <Route path="Delevery" element={<ManageProduct />} />
+                        <Route path="Delivery" element={<Delevery />} />
+                        <Route path="makeadmin" element={<MakeAdmin />} />
 
                     </Routes>
                 </div>
