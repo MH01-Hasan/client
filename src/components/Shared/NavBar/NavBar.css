@@ -79,7 +79,6 @@
 .menu-name {
   color: #6e7990;
   text-decoration: none;
-
 }
 
 .menu-name:hover {
@@ -112,8 +111,7 @@
   text-decoration: none;
   font-size: 24px;
   font-weight: 700;
-  font-family: 'Grape Nuts', cursive;
-
+  font-family: "Grape Nuts", cursive;
 }
 
 .nav-name:hover {
@@ -208,6 +206,6 @@
 }
 
 .user-name {
-  color: #e96967;
-  margin-left: -19px;
+  color: #df5a58;
+  margin-left: -8px;
 }

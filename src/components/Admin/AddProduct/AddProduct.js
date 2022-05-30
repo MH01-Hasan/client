@@ -192,18 +192,20 @@ const AddProduct = () => {
     data.image4 = imageData4?.secure_url;
 
     console.log(data);
-    axios.post("http://localhost:5000/Product", data).then((res) => {
-      if (res.data.acknowledged) {
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "successfully Add New Product",
-          showConfirmButton: false,
-          timer: 2500,
-        });
-        reset();
-      }
-    });
+    axios
+      .post("https://secret-ravine-65882.herokuapp.com/Product", data)
+      .then((res) => {
+        if (res.data.acknowledged) {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "successfully Add New Product",
+            showConfirmButton: false,
+            timer: 2500,
+          });
+          reset();
+        }
+      });
   };
 
   return (
