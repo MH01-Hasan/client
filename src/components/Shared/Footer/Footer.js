@@ -1,54 +1,17 @@
-// import axios from "axios";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-// import { useForm } from "react-hook-form";
 import {
   FaEnvelope,
   FaFacebookF,
   FaInstagram,
   FaMapMarkerAlt,
-  // FaPaperPlane,
   FaPhone,
   FaTwitter,
 } from "react-icons/fa";
-// import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-// import Swal from "sweetalert2";
 import "./Footer.css";
 
 const Footer = () => {
-  //   const {
-  //     register,
-  //     handleSubmit,
-  //     reset,
-  //     formState: { errors },
-  //   } = useForm();
-  //   const onSubmit = (data) => {
-  //     console.log(data);
-  //     axios
-  //       .post("https://shrouded-headland-44423.herokuapp.com/emailSub", data)
-  //       .then((res) => {
-  //         if (res.status === 200) {
-  //           reset();
-  //           Swal.fire({
-  //             position: "top-end",
-  //             icon: "success",
-  //             title: "Your Email has been saved",
-  //             showConfirmButton: false,
-  //             timer: 1500,
-  //           });
-  //         } else {
-  //           Swal.fire({
-  //             position: "top-end",
-  //             icon: "error",
-  //             title: "Your Email has been not saved",
-  //             showConfirmButton: false,
-  //             timer: 1500,
-  //           });
-  //         }
-  //       });
-  //   };
-  //   const admin = useSelector((state) => state.admin.admin);
   return (
     <footer>
       <Container>
@@ -71,12 +34,8 @@ const Footer = () => {
                   href="mailto:support@gmail.com"
                 >
                   <FaEnvelope />
-                  mrisiddik9@gmail.com
+                  emirateslifestyles.ae@gmail.com
                 </a>
-              </li>
-              <li>
-                <FaMapMarkerAlt />
-                Al Jabeer Building 301, Al Jurf 3, Ajman
               </li>
               <li className="spical">
                 <a
