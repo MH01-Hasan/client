@@ -1,3 +1,15 @@
 .banner img {
-    height: 550px;
+    height: 580px;
+}
+
+@media screen and (max-width: 844px) {
+    .banner img {
+        height: 320px;
+    }
+}
+
+@media screen and (max-width: 667px) {
+    .banner img {
+        height: 300px;
+    }
 }

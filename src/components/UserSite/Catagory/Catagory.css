@@ -82,3 +82,45 @@
         margin-bottom: 0;
     }
 }
+
+@media screen and (max-width: 667px) {
+
+    .show-product-air {
+        width: 47%;
+        margin-bottom: 13px;
+        margin-left: 6px;
+    }
+
+    .image-show {
+        height: 144px;
+    }
+
+    .product-content-info {
+        margin-bottom: 1px;
+    }
+
+    .product-content-info h4 {
+        font-size: 15px;
+    }
+
+    .product-content-info p {
+        font-size: 15px;
+    }
+
+    .link-product {
+        margin-top: 11px;
+        margin-bottom: 0;
+    }
+
+    .details-link {
+        padding: 2% 20%;
+        color: #183566;
+        font-size: 18px;
+        letter-spacing: 0px;
+        border-radius: 2px;
+        border-top: 1px solid #808080;
+        background-color: #deb887;
+        font-family: math;
+        text-decoration: none;
+    }
+}
