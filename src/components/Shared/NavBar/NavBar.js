@@ -18,7 +18,7 @@ const NavBar = () => {
     <nav className="navbar">
       <div className="nav-container">
         <NavLink exact to="/" className=" pb-2 nav-logo text-left d-flex">
-          <div className="nav-name">Emirat LifeStyles</div>
+          <div className="nav-name">Emirates LifeStyles</div>
         </NavLink>
         <ul
           id="item-container"
@@ -76,7 +76,7 @@ const NavBar = () => {
               </div>
             </NavLink>
           </li>
-          <li className="nav-item ">
+          <li className="nav-item">
             {user.email ? (
               <Nav.Link>
                 <button className="btn btn-primary" onClick={logOut}>
@@ -89,7 +89,7 @@ const NavBar = () => {
               </Nav.Link>
             )}
           </li>
-          <li className="user-name mb-2">{user?.displayName}</li>
+          <li className="user-name">{user?.displayName}</li>
         </ul>
         <div className="nav-icon " onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"}></i>

@@ -49,10 +49,8 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/product" element={<HomeProduct />} />
 
-
             <Route path="/cart" element={<Cart />} />
             <Route path="/details/:id" element={<Details />} />
-            <Route path="/Shiping" element={<Shiping />} />
 
             <Route path="/Order/:id" element={<Order />} />
 
@@ -61,8 +59,6 @@ function App() {
             <Route path="/ManageOrder" element={<ManageOrder />} />
             <Route path="/ManageProduct" element={<ManageProduct />} />
             <Route path="/Delivery" element={<Delevery />} /> */}
-
-
 
             <Route path="product/catagory/AirForce" element={<AirForce />} />
             <Route path="product/catagory/AirJorden" element={<AirJorden />} />
@@ -96,16 +92,15 @@ function App() {
               }
             />
 
-
-
             <Route path="/MyOrder" element={<MyOrder />} />
-            <Route path="/dashboard/*" element={
-              <PrivateRoute>
-                <Dashboard />
-              </PrivateRoute>
-
-            } />
-
+            <Route
+              path="/dashboard/*"
+              element={
+                <PrivateRoute>
+                  <Dashboard />
+                </PrivateRoute>
+              }
+            />
           </Routes>
           <Footer />
         </Router>
