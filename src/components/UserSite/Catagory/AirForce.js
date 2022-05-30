@@ -17,7 +17,7 @@ const AirForce = () => {
       });
   }, []);
   return (
-    <div className="mx-5 mt-5 mb-5">
+    <div className="mx-3 mt-5 mb-5">
       <div className="row home-content-product">
         {AirForce?.map((product) => (
           <div className=" show-product-air" key={product._id}>
