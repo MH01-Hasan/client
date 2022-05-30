@@ -62,7 +62,7 @@ const Details = () => {
   console.log(imagess[0]);
 
   if (!product) {
-    return <p className="lodding">Lodding................</p>;
+    return <p className="lodding">Loading................</p>;
   }
 
   return (

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Catagory.css";
 
@@ -32,7 +31,7 @@ const AirForce = () => {
                 <p>Price : AED {product.price}</p>
                 <div className="link-product">
                   <Link to={`/details/${product._id}`} className="details-link">
-                    Veiw More
+                    View Details
                   </Link>
                 </div>
               </div>
