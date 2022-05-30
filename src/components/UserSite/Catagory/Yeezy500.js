@@ -29,7 +29,7 @@ const Yeezy500 = () => {
                 <p>Price : AED {product.price}</p>
                 <div className="link-product">
                   <Link to={`/details/${product._id}`} className="details-link">
-                    Veiw More
+                    View Details
                   </Link>
                 </div>
               </div>
