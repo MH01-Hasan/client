@@ -37,9 +37,8 @@ const Shiping = () => {
   let navigate = useNavigate();
 
   const current = new Date();
-  const date = `${current.getDate()}/${
-    current.getMonth() + 1
-  }/${current.getFullYear()}`;
+  const date = `${current.getDate()}/${current.getMonth() + 1
+    }/${current.getFullYear()}`;
 
   const handelClick = () => {
     const order = {
@@ -73,7 +72,7 @@ const Shiping = () => {
     <div className="container mt-5">
       <div className="row">
         <div className="shiping-info col-lg-7 col-md-6 col-sm-12">
-          <h2>EMIRATLIFESTYLE</h2>
+          <h2>EMIRATES LIFESTYLES</h2>
           <div className="information-fild-checkout">
             {/* ..................................1st Part SheckOut Method. Start..................*/}
             {!step && (

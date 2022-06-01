@@ -54,6 +54,14 @@
     text-decoration: none;
 }
 
+.spnier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+
+}
+
 @media screen and (max-width: 844px) {
 
     .show-product-air {
@@ -80,6 +88,13 @@
     .link-product {
         margin-top: 11px;
         margin-bottom: 0;
+    }
+
+    .spnier {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
 }
 
@@ -122,5 +137,12 @@
         background-color: #deb887;
         font-family: math;
         text-decoration: none;
+    }
+
+    .spnier {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
 }

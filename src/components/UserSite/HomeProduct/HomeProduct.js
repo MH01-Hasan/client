@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./HomeProduct.css";
-import catagory1 from "../../../images/download.jfif";
-import catagory2 from "../../../images/catagory2.webp";
-import catagory3 from "../../../images/catagory3.png";
-import catagory4 from "../../../images/catagory4.webp";
+import catagory1 from "../../../images/8.jpg";
+import catagory2 from "../../../images/7.jpg";
+import catagory3 from "../../../images/6.jpg";
+import catagory4 from "../../../images/5.jpg";
 
-import Addi1 from "../../../images/addi1.webp";
-import Add2 from "../../../images/addi2.webp";
-import Add3 from "../../../images/add3.webp";
-import Add4 from "../../../images/addi4.webp";
+import Addi1 from "../../../images/4.jpg";
+import Add2 from "../../../images/3.jpg";
+import Add3 from "../../../images/1.jpg";
+import Add4 from "../../../images/2.jpg";
 
 import bannerimage from "../../../images/mideljpg.jpg";
 import ladisbag from "../../../images/ladisbag.webp";
@@ -19,15 +19,6 @@ import walate from "../../../images/walate.jfif";
 import Others from "../../../images/others.png";
 
 const HomeProduct = () => {
-    const [products, setProducts] = useState([]);
-    console.log(products);
-
-    useEffect(() => {
-        fetch("https://secret-ravine-65882.herokuapp.com/Product")
-            .then((res) => res.json())
-            .then((data) => setProducts(data));
-    }, []);
-
     return (
         <div className="mb-5 mx-3">
             <div className="row mt-5 catagory-fild">
@@ -36,7 +27,7 @@ const HomeProduct = () => {
                     <Link to="product/catagory/AirForce" className="home-link">
                         <div className="link-info-fild">
                             <img src={catagory1} alt="" />
-                            <p>Air Force</p>
+                            <p>Air Force 1</p>
                         </div>
                     </Link>
                 </div>
@@ -44,7 +35,7 @@ const HomeProduct = () => {
                     <Link to="product/catagory/AirJorden" className="home-link">
                         <div className="link-info-fild">
                             <img src={catagory2} alt="" />
-                            <p>Air Jordan</p>
+                            <p>Air Jordan 1</p>
                         </div>
                     </Link>
                 </div>
@@ -52,7 +43,7 @@ const HomeProduct = () => {
                     <Link to="product/catagory/AirMax" className="home-link">
                         <div className="link-info-fild">
                             <img src={catagory3} alt="" />
-                            <p>Air Max</p>
+                            <p>Air Jordan 4</p>
                         </div>
                     </Link>
                 </div>
@@ -60,7 +51,7 @@ const HomeProduct = () => {
                     <Link to="product/catagory/Dunk" className="home-link">
                         <div className="link-info-fild">
                             <img src={catagory4} alt="" />
-                            <p>Dunk</p>
+                            <p>Nike Dunk</p>
                         </div>
                     </Link>
                 </div>
@@ -73,7 +64,7 @@ const HomeProduct = () => {
                         <Link to="product/catagory/Yeezy_350_v2" className="home-link">
                             <div className="link-info-fild">
                                 <img src={Addi1} alt="" />
-                                <p>Yeezy_350_v2</p>
+                                <p>Yeezy 350 v2</p>
                             </div>
                         </Link>
                     </div>
@@ -81,7 +72,7 @@ const HomeProduct = () => {
                         <Link to="product/catagory/Yeezy500" className="home-link">
                             <div className="link-info-fild">
                                 <img src={Add2} alt="" />
-                                <p>Yeezy_500</p>
+                                <p>Yeezy 500</p>
                             </div>
                         </Link>
                     </div>
@@ -97,7 +88,7 @@ const HomeProduct = () => {
                         <Link to="product/catagory/Yeezy700" className="home-link">
                             <div className="link-info-fild">
                                 <img src={Add4} alt="" />
-                                <p>Yeezy_700</p>
+                                <p>Yeezy 700</p>
                             </div>
                         </Link>
                     </div>
@@ -119,7 +110,7 @@ const HomeProduct = () => {
                         <Link to="/product/catagory/Watch" className="home-link">
                             <div className="link-info-fild">
                                 <img src={watch} alt="" />
-                                <p>watch</p>
+                                <p>Watch</p>
                             </div>
                         </Link>
                     </div>
@@ -127,7 +118,7 @@ const HomeProduct = () => {
                         <Link to="product/catagory/Wallet" className="home-link">
                             <div className="link-info-fild">
                                 <img src={walate} alt="" className="ladisbag-image" />
-                                <p>wallet</p>
+                                <p>Wallet</p>
                             </div>
                         </Link>
                     </div>
