@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ButtonGroup, Card, ToggleButton } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
+import { ScaleLoader } from "react-spinners";
 import { addToCart } from "../../../Redux/cardSlics";
 import "./Details.css";
 
@@ -11,6 +12,7 @@ const Details = () => {
   const [product, setProduct] = useState({});
   const [lodding, setLodding] = useState(false);
 
+
   useEffect(() => {
     setLodding(true);
     fetch(`https://secret-ravine-65882.herokuapp.com/Product/${id}`)
@@ -19,7 +21,7 @@ const Details = () => {
         setProduct(item);
         setLodding(false);
       });
-  }, []);
+  }, [id]);
 
   const imagess = [
     product.image,
@@ -59,70 +61,72 @@ const Details = () => {
 
   const [selectedimg, setSelectedimg] = useState(imagess[0]);
 
-  console.log(imagess[0]);
-
-  if (!product) {
-    return <p className="lodding">Loading................</p>;
-  }
-
   return (
     <div className="container">
-      <div className="row mt-5 mb-5">
-        <div className="col-lg-6 col-sm-12">
-          <div className="details-imagess">
-            <img src={selectedimg || imagess[0]} alt="" className="slected" />
+      {lodding ? <div className="spnier">
+        <ScaleLoader color={"#7093e5"} size={150} />
+      </div> :
 
-            <div className="imagecontainer">
-              {imagess.map((img, index) => (
-                <img
-                  key={index}
-                  src={img}
-                  alt="dog"
-                  onClick={() => setSelectedimg(img)}
-                />
-              ))}
+
+        <div className="row mt-5 mb-5">
+          <div className="col-lg-6 col-sm-12">
+            <div className="details-imagess">
+              <img src={selectedimg || imagess[0]} alt="" className="slected" />
+
+              <div className="imagecontainer">
+                {imagess.map((img, index) => (
+                  <img
+                    key={index}
+                    src={img}
+                    alt="dog"
+                    onClick={() => setSelectedimg(img)}
+                  />
+                ))}
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="col-lg-6 col-sm-12 product-info-details">
-          <p>Brand : {product?.Brand_Name}</p>
-          <h1 className="details-name">{product?.Product_Name}</h1>
-          <h5 className="price-details">{`Price: AED ${product.price}`}</h5>
+          <div className="col-lg-6 col-sm-12 product-info-details">
+            <p>Brand : {product?.Brand_Name}</p>
+            <h1 className="details-name">{product?.Product_Name}</h1>
+            <h5 className="price-details">{`Price: AED ${product.price}`}</h5>
 
-          <div>
-            <h5 className="Size">Size</h5>
 
-            <ButtonGroup>
-              {radios.map((radio, idx) => (
-                <ToggleButton
-                  key={idx}
-                  id={`radio-${idx}`}
-                  type="radio"
-                  variant={idx % 2 ? "outline-secondary" : "outline-primary"}
-                  name="radio"
-                  value={radio.value}
-                  checked={radioValue === radio.value}
-                  onChange={(e) => setRadioValue(e.currentTarget.value)}
-                  className="redio-btn-css"
-                >
-                  {radio.name}
-                </ToggleButton>
-              ))}
-            </ButtonGroup>
+            {(product?.Catagory !== "Ladies_Bag" && product?.Catagory !== "Wallet" && product?.Catagory !== "Watch" && product?.Catagory !== "Others") && <div>
+              <h5 className="Size">Size</h5>
+              <ButtonGroup>
+                {radios.map((radio, idx) => (
+                  <ToggleButton
+                    key={idx}
+                    id={`radio-${idx}`}
+                    type="radio"
+                    variant={idx % 2 ? "outline-secondary" : "outline-primary"}
+                    name="radio"
+                    value={radio.value}
+                    checked={radioValue === radio.value}
+                    onChange={(e) => setRadioValue(e.currentTarget.value)}
+                    className="redio-btn-css"
+                  >
+                    {radio.name}
+                  </ToggleButton>
+                ))}
+              </ButtonGroup>
+            </div>}
+
+
+
+            <button
+              onClick={() => handeladdToCard(product)}
+              className="details-add-to"
+            >
+              Add to cart
+            </button>
+
+            <div className="Description mt-5">
+              <small className="Description">{product?.Description}</small>
+            </div>
           </div>
-          <button
-            onClick={() => handeladdToCard(product)}
-            className="details-add-to"
-          >
-            Add to cart
-          </button>
-
-          <div className="Description mt-5">
-            <small className="Description">{product?.Description}</small>
-          </div>
-        </div>
-      </div>
+        </div>}
     </div>
   );
 };
