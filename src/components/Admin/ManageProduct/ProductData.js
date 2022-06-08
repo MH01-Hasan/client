@@ -1,6 +1,7 @@
 import React from "react";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const ProductData = ({
   Product,
@@ -8,12 +9,13 @@ const ProductData = ({
   setlodding,
   setManageProduct,
   ManageProduct,
+
 }) => {
   const { _id, Brand_Name, Catagory, Model, Product_Name, image, price } =
     Product;
   // .....................................Manage product Delete And update Work Start ......................
   const handeldelet = (id) => {
-    const prosid = window.confirm("are you sure delete");
+    const prosid = window.confirm("Confirm Delete ?");
     if (prosid) {
       setlodding(true);
       axios

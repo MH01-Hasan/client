@@ -8,7 +8,6 @@ import "./ManageOrder.css";
 const Order = () => {
   const { id } = useParams();
   const [order, setOrder] = useState({});
-  console.log(order);
 
   useEffect(() => {
     fetch(`https://secret-ravine-65882.herokuapp.com/Order/${id}`)
@@ -34,6 +33,7 @@ const Order = () => {
 
         <div className="pdf-body" ref={componentRef}>
           <div className="mt-3 ">
+
             <section className="invoice-header">
               <div>
                 <h4 className="invoice">Invoice</h4>
@@ -41,17 +41,12 @@ const Order = () => {
 
               <div className="hospital-info">
                 <div>
-                  {/* <p className="company-info">
-                    {" "}
-                    <HiLocationMarker /> Al Jabeer Building 301, Al Jurf 3,
-                    Ajman
-                  </p> */}
                   <p className="company-info">
-                    <HiPhoneMissedCall /> +9710568775565
+                    <HiPhoneMissedCall /> +971568775565
                   </p>
                   <p className="company-info">
                     {" "}
-                    <HiMail /> emirateslifestyles.ae@gmail.com
+                    <HiMail /> emirateslifestyles@yahoo.com
                   </p>
                 </div>
               </div>
@@ -80,13 +75,14 @@ const Order = () => {
                 <p className="build-info">Date : {order?.Date?.date}</p>
               </div>
 
-              <div>
+              <div className="invoice-num">
                 <h4>Invoice Number</h4>
-                <p>{order?._id}</p>
+                <p>{order?._id?.slice(13, 24)}</p>
               </div>
             </section>
-            <section className="product-info mt-5 mb-5">
-              <Table>
+
+            <section className=" mt-5 mb-5">
+              <Table responsive className="invoice-table-fild">
                 <thead>
                   <tr>
                     <th>Sl</th>
@@ -147,7 +143,7 @@ const Order = () => {
 
             <section className="mb-5 mt-5">
               <div className="">
-                <p>Mr/Ms {}</p>
+                <p>Mr/Ms { }</p>
                 <small>
                   Thank you for being our valued customer. We are so grateful
                   for the pleasure of serving you and hope we met your

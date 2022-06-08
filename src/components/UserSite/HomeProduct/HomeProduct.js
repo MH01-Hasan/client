@@ -18,9 +18,12 @@ import watch from "../../../images/Watch.jpg";
 import walate from "../../../images/walate.jfif";
 import Others from "../../../images/others.png";
 
+import DesignersShoes from "../../../images/Degs.jpg";
+
 const HomeProduct = () => {
     return (
         <div className="mb-5 mx-3">
+            {/*Nike section   */}
             <div className="row mt-5 catagory-fild">
                 <h3>Hottest Nike Collections🏃</h3>
                 <div className="mt-3 home-catagory">
@@ -56,7 +59,9 @@ const HomeProduct = () => {
                     </Link>
                 </div>
             </div>
+            {/*Nike section Ennd  */}
 
+            {/*Adidas section Adidas  */}
             <div className="mt-5 Addidas">
                 <h2>Trending Now🔥 Adidas</h2>
                 <div className="row mt-5 catagory-fild">
@@ -94,7 +99,29 @@ const HomeProduct = () => {
                     </div>
                 </div>
             </div>
+            {/*Adidas section  End */}
 
+
+            {/*Designers Shoes section  */}
+            <div className="mt-5 Addidas">
+                <h2>Designers 🔥 Shoes</h2>
+                <div className="row mt-2 catagory-fild">
+                    <div className="mt-3 home-catagory">
+                        <Link to="/product/catagory/Designers_Shoes" className="home-link">
+                            <div className="link-info-fild">
+                                <img src={DesignersShoes} alt="" className="ladisbag-image" />
+                                <p>Designers Shoes</p>
+                            </div>
+                        </Link>
+                    </div>
+
+                </div>
+            </div>
+            {/*Designers Shoes section  End */}
+
+
+
+            {/*Accessories section  */}
             <div className="mt-5 Addidas">
                 <h2>Accessories 🔥</h2>
                 <div className="row mt-2 catagory-fild">
@@ -132,6 +159,7 @@ const HomeProduct = () => {
                     </div>
                 </div>
             </div>
+            {/*Accessories section  End */}
 
             <div className="row mt-3">
                 <div className="col-lg-7 col-sm-12 thard-contaent mt-5">

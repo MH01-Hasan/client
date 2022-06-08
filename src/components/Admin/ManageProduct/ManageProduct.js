@@ -7,12 +7,13 @@ const ManageProduct = () => {
   const [ManageProduct, setManageProduct] = useState([]);
 
   const [lodding, setlodding] = useState(false);
+  // const [id, setid] = useState({});
 
   useEffect(() => {
     fetch("https://secret-ravine-65882.herokuapp.com/Product")
       .then((res) => res.json())
       .then((data) => setManageProduct(data));
-  }, [lodding]);
+  }, [ManageProduct, lodding]);
 
   return (
     <div>
@@ -38,6 +39,7 @@ const ManageProduct = () => {
               setlodding={setlodding}
               ManageProduct={ManageProduct}
               setManageProduct={setManageProduct}
+
             ></ProductData>
           ))}
         </tbody>

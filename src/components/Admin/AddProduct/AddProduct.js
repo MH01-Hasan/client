@@ -5,6 +5,7 @@ import { ScaleLoader } from "react-spinners";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 
+
 const AddProduct = () => {
   // ....................Image UpLoad ??..........................
   const [selectedImages, setSelectedImages] = useState([]);
@@ -191,15 +192,14 @@ const AddProduct = () => {
     data.image3 = imageData3?.secure_url;
     data.image4 = imageData4?.secure_url;
 
-    console.log(data);
     axios
       .post("https://secret-ravine-65882.herokuapp.com/Product", data)
       .then((res) => {
         if (res.data.acknowledged) {
           Swal.fire({
-            position: "top-end",
+            position: "center",
             icon: "success",
-            title: "successfully Add New Product",
+            title: "Successfully Add New Product",
             showConfirmButton: false,
             timer: 2500,
           });
@@ -207,6 +207,11 @@ const AddProduct = () => {
         }
       });
   };
+
+  // Size Section ??
+
+
+
 
   return (
     <div className="mt-5 upload-fild mb-5">
@@ -329,7 +334,7 @@ const AddProduct = () => {
                 placeholder="Model No"
                 required={true}
                 className="producr-info-input-fild"
-              />{" "}
+              />
               <br />
               <textarea
                 {...register("Description")}
@@ -337,7 +342,7 @@ const AddProduct = () => {
                 placeholder="Description"
                 required={true}
                 className="producr-info-input-fild Description"
-              />{" "}
+              />
               <br />
               <input
                 {...register("price")}
@@ -371,7 +376,113 @@ const AddProduct = () => {
                 placeholder="Brand Name"
                 required={true}
                 className="thirdsection"
-              />{" "}
+              />
+
+              {/*........................ Size Section ........................................*/}
+              <div className="mt-3">
+                <h4>Size</h4>
+                <input
+                  {...register("Size_35")}
+                  placeholder="35"
+                  className="Size-input-fild"
+
+
+                />
+                <input
+                  {...register("Size_36")}
+                  placeholder="36"
+                  className="Size-input-fild"
+
+
+                />
+                <input
+                  {...register("Size_37")}
+                  placeholder="37"
+                  className="Size-input-fild"
+
+                />
+                <input
+                  {...register("Size_38")}
+                  placeholder="38"
+                  className="Size-input-fild"
+
+
+                />
+                <input
+                  {...register("Size_39")}
+                  placeholder="39"
+                  className="Size-input-fild"
+
+
+                />
+                <input
+                  {...register("Size_40")}
+                  placeholder="40"
+                  className="Size-input-fild"
+
+
+                />
+                <input
+                  {...register("Size_41")}
+                  placeholder="41"
+                  className="Size-input-fild"
+
+
+                />
+                <input
+                  {...register("Size_42")}
+                  placeholder="42"
+                  className="Size-input-fild"
+
+
+                />
+                <input
+                  {...register("Size_43")}
+                  placeholder="43"
+                  className="Size-input-fild"
+
+                />
+                <input
+                  {...register("Size_44")}
+                  placeholder="44"
+                  className="Size-input-fild"
+
+
+                />
+                <input
+                  {...register("Size_45")}
+                  placeholder="45"
+                  className="Size-input-fild"
+
+
+                />
+                <input
+                  {...register("Size_46")}
+                  placeholder="46"
+                  className="Size-input-fild"
+
+
+                />
+                <input
+                  {...register("Size_47")}
+                  placeholder="47"
+                  className="Size-input-fild"
+
+
+                />
+                <input
+                  {...register("Size_48")}
+                  placeholder="48"
+                  className="Size-input-fild"
+
+                />
+
+              </div>
+
+              {/* Size Section */}
+
+
+
               <br />
               <div className="slider-image">
                 <img src={imageData1?.secure_url} alt="" />

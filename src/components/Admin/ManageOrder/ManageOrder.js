@@ -5,7 +5,7 @@ import OrdersData from "./OrdersData";
 const ManageOrder = () => {
   const [orders, setOrders] = useState([]);
   const [SearchData, setSearchData] = useState([]);
-  // const [order, setOrders] = useState([])
+
 
   const [lodding, setlodding] = useState(false);
 

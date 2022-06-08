@@ -112,3 +112,52 @@
     margin-bottom: 1px;
     font-size: 15px;
 }
+
+.invoice-table-fild {}
+
+/* order responsive */
+
+@media screen and (max-width: 665px) {
+    .fild-pdf {
+        background-color: #b9b3ab;
+        padding: 0px 0px;
+    }
+
+    .invoice-header {}
+
+    .pdf-body {
+        margin: auto;
+        width: 352px;
+        background-color: #fff;
+        border-radius: 6px;
+        padding: 10px 14px;
+    }
+
+    .customer-info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+        margin-bottom: 23px;
+
+    }
+
+    .build-to {
+        width: 70%;
+    }
+
+    .build-to h5 {
+        font-size: 16px;
+        color: #0e70e5;
+    }
+
+    .invoice-num {
+        width: 30%;
+    }
+
+    .invoice-num h4 {
+        font-size: 13px;
+        color: #0e70e5;
+    }
+
+
+}

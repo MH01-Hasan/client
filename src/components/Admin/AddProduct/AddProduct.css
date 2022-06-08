@@ -50,7 +50,7 @@
 }
 
 .producr-info-input-fild {
-    width: 47%;
+    width: 46%;
     height: 34px;
     margin-right: 18px;
     border: 1px solid #808080;
@@ -111,4 +111,16 @@
     width: 144px;
     height: 126px;
     border-radius: 5px;
+}
+
+.Size-input-fild {
+    width: 70px;
+    border: 0.5px solid #808080;
+    margin-left: 4px;
+    margin-top: 11px;
+    padding-left: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #06b006;
+    font-weight: 700;
 }
