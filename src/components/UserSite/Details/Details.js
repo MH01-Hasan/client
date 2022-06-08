@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ButtonGroup, Card, ToggleButton } from "react-bootstrap";
+import { ButtonGroup, ToggleButton } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { ScaleLoader } from "react-spinners";
@@ -10,6 +10,7 @@ const Details = () => {
   const { id } = useParams();
   // ....................................Api Load Data...........................
   const [product, setProduct] = useState({});
+  // console.log(product)
   const [lodding, setLodding] = useState(false);
 
 
@@ -44,18 +45,24 @@ const Details = () => {
 
   // ....................................user Inpur Product Size..........................
   const [radioValue, setRadioValue] = useState("");
+  console.log(radioValue)
   product["Size"] = radioValue;
+
   const radios = [
-    { name: "36", value: "36" },
-    { name: "37", value: "37" },
-    { name: "38", value: "38" },
-    { name: "39", value: "39" },
-    { name: "40", value: "40" },
-    { name: "41", value: "41" },
-    { name: "42", value: "42" },
-    { name: "43", value: "43" },
-    { name: "44", value: "44" },
-    { name: "45", value: "45" },
+    { name: "35", value: `${product?.Size_35 || ""}` },
+    { name: "36", value: `${product?.Size_36 || ""}` },
+    { name: "37", value: `${product?.Size_37 || ""}` },
+    { name: "38", value: `${product?.Size_38 || ""}` },
+    { name: "39", value: `${product?.Size_39 || ""}` },
+    { name: "40", value: `${product?.Size_40 || ""}` },
+    { name: "41", value: `${product?.Size_41 || ""}` },
+    { name: "42", value: `${product?.Size_42 || ""}` },
+    { name: "43", value: `${product?.Size_43 || ""}` },
+    { name: "44", value: `${product?.Size_44 || ""}` },
+    { name: "45", value: `${product?.Size_45 || ""}` },
+    { name: "46", value: `${product?.Size_46 || ""}` },
+    { name: "47", value: `${product?.Size_47 || ""}` },
+    { name: "48", value: `${product?.Size_48 || ""}` },
   ];
   // ....................................user Inpur Product Size..........................
 
@@ -94,26 +101,28 @@ const Details = () => {
 
             {(product?.Catagory !== "Ladies_Bag" && product?.Catagory !== "Wallet" && product?.Catagory !== "Watch" && product?.Catagory !== "Others") && <div>
               <h5 className="Size">Size</h5>
-              <ButtonGroup>
+              <ButtonGroup className="size-batton-value">
                 {radios.map((radio, idx) => (
+
                   <ToggleButton
                     key={idx}
                     id={`radio-${idx}`}
                     type="radio"
                     variant={idx % 2 ? "outline-secondary" : "outline-primary"}
                     name="radio"
-                    value={radio.value}
+                    value={radio?.value}
                     checked={radioValue === radio.value}
                     onChange={(e) => setRadioValue(e.currentTarget.value)}
-                    className="redio-btn-css"
+                    className={radio?.value !== "" ? "togolcss" : "redio-btn-css"}
+                    disabled={radio?.value === "" && true}
                   >
-                    {radio.name}
+                    {radio?.name}
                   </ToggleButton>
                 ))}
               </ButtonGroup>
             </div>}
-
-
+            {/* 
+            "redio-btn-css" */}
 
             <button
               onClick={() => handeladdToCard(product)}

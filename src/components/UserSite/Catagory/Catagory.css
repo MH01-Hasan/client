@@ -98,7 +98,7 @@
     }
 }
 
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 653px) {
 
     .show-product-air {
         width: 47%;
@@ -128,16 +128,15 @@
     }
 
     .details-link {
-        padding: 2% 20%;
-        color: #183566;
-        font-size: 18px;
-        letter-spacing: 0px;
-        border-radius: 2px;
+        color: #100f0f;
+        font-size: 15px;
+        border-radius: 12px;
         border-top: 1px solid #808080;
         background-color: #deb887;
         font-family: math;
         text-decoration: none;
     }
+
 
     .spnier {
         display: flex;

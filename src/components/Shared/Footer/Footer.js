@@ -4,7 +4,6 @@ import {
   FaEnvelope,
   FaFacebookF,
   FaInstagram,
-  FaMapMarkerAlt,
   FaPhone,
   FaTwitter,
 } from "react-icons/fa";
@@ -24,7 +23,7 @@ const Footer = () => {
               <li>
                 <a rel="noreferrer" target="_blank" href="tell:01629094984">
                   <FaPhone />
-                  +9710568775565
+                  +971568775565
                 </a>
               </li>
               <li>
@@ -34,7 +33,7 @@ const Footer = () => {
                   href="mailto:support@gmail.com"
                 >
                   <FaEnvelope />
-                  emirateslifestyles.ae@gmail.com
+                  emirateslifestyles@yahoo.com
                 </a>
               </li>
               <li className="spical">

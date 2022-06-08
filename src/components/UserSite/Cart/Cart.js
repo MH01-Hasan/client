@@ -44,7 +44,7 @@ const Cart = () => {
     <div>
       <h1 className="shoping">Shopping Cart</h1>
       {cart.cardItem.length === 0 ? (
-        <div className="cart-empty">
+        <div className="cart-empty mb-5">
           <p>Your cart is currently empty</p>
           <div className="start-shopping">
             <Link to="/">
