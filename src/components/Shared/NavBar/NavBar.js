@@ -79,13 +79,13 @@ const NavBar = () => {
           <li className="nav-item">
             {user.email ? (
               <Nav.Link>
-                <button className="btn btn-primary" onClick={logOut}>
+                <button className="btn btn-dark" onClick={logOut}>
                   LOGOUT
                 </button>
               </Nav.Link>
             ) : (
               <Nav.Link as={Link} to="/login">
-                <button className="btn btn-primary">LOGIN</button>
+                <button className="btn btn-dark">LOGIN</button>
               </Nav.Link>
             )}
           </li>

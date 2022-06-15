@@ -5,7 +5,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaPhone,
-  FaTwitter,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Footer.css";
@@ -14,10 +14,10 @@ const Footer = () => {
   return (
     <footer>
       <Container>
-        <Row>
+        <Row className="text-center">
           <Col sm={6} lg={4}>
             <div className="footer-menu-heading">
-              <h3>Reach Us</h3>
+              <h3 className="h">Reach Us</h3>
             </div>
             <ul className="reach-us">
               <li>
@@ -30,7 +30,7 @@ const Footer = () => {
                 <a
                   rel="noreferrer"
                   target="_blank"
-                  href="mailto:support@gmail.com"
+                  href="mailto:emirateslifestyles@yahoo.com"
                 >
                   <FaEnvelope />
                   emirateslifestyles@yahoo.com
@@ -45,18 +45,17 @@ const Footer = () => {
                   <FaFacebookF />
                 </a>
                 <a
-                  href="https://www.twitter.com/"
+                  href="https://web.whatsapp.com/"
                   rel="noreferrer"
                   target="_blank"
                 >
-                  <FaTwitter />
+                  <FaWhatsapp />
                 </a>
                 <a
                   href="https://www.instagram.com/"
                   rel="noreferrer"
                   target="_blank"
                 >
-                  {" "}
                   <FaInstagram />
                 </a>
               </li>
@@ -64,25 +63,25 @@ const Footer = () => {
           </Col>
           <Col sm={6} lg={4}>
             <div className="footer-menu-heading">
-              <h3>Useful Links</h3>
+              <h3 className="h">Useful Links</h3>
             </div>
             <ul className="footer-menu">
-              <Link className="footer-item" to="/login">
-                Admin Login
+              <Link className="footer-item" to="/">
+                Under maintenance
               </Link>
             </ul>
           </Col>
           <Col sm={6} lg={4}>
             <div className="footer-menu-heading">
-              <h3>Working Day</h3>
+              <h3 className="h">Shipping Days</h3>
             </div>
             <ul className="working">
               <li>
-                <span>Monday-Saturday</span>
+                <span>Saturday-Thursday</span>
                 <span>9:00 - 20:00</span>
               </li>
               <li>
-                <span>Sunday</span>
+                <span>Friday</span>
                 <span>Closed</span>
               </li>
             </ul>
