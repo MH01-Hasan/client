@@ -1,7 +1,7 @@
 :root {
-  --footer-bg: #eff1fe;
+  --footer-bg: black;
   --primary-color: #7093e5;
-  --body-color: #6e7990;
+  --body-color: #cbd2e1;
   --second-color: #f68685;
 }
 footer {
@@ -135,4 +135,7 @@ ul li {
 }
 hr {
   color: var(--primary-color);
+}
+.h {
+  color: #cbd2e1;
 }

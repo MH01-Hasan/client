@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #eff1fe;
+  background-color: #000000;
   text-transform: uppercase;
   height: 80px;
   display: flex;
@@ -15,7 +15,7 @@
 
 @media screen and (max-width: 467px) {
   .navbar {
-    background-color: #eff1fe;
+    background-color: #000000;
   }
 }
 
@@ -60,7 +60,7 @@
 }
 
 .nav-links {
-  color: aqua;
+  color: #cbd2e1;
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
@@ -77,7 +77,7 @@
 }
 
 .menu-name {
-  color: #6e7990;
+  color: #cbd2e1;
   text-decoration: none;
 }
 
@@ -98,7 +98,7 @@
 
 .nav-item .active {
   font-weight: 700;
-  color: #6e7990;
+  color: #cbd2e1;
 }
 
 .nav-icon {
@@ -107,17 +107,16 @@
 
 .nav-name {
   list-style: none;
-  color: #6e7990;
+  color: #cbd2e1;
   text-decoration: none;
   font-size: 24px;
   font-weight: 700;
-
 }
 
 .nav-name:hover {
   list-style: none;
   text-decoration: none;
-  color: #6e7990;
+  color: #cbd2e1;
 }
 
 .cart {
@@ -129,13 +128,13 @@
 
 .cart-icon {
   font-size: 31px;
-  color: #6e7990;
+  color: #d70e0e;
 }
 
 .cart-item {
   position: absolute;
-  background-color: #ea5b59;
-  color: #fff;
+  background-color: #fff;
+  color: black;
   border-radius: 50%;
   margin-top: 2px;
   width: 14px;
@@ -149,7 +148,7 @@
 
 @media screen and (max-width: 1100px) {
   .nav-menu {
-    background-color: #eff1fe;
+    background-color: #000000;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -169,7 +168,7 @@
   }
 
   .nav-item .active {
-    color: #6e7990;
+    color: #cbd2e1;
     border: none;
   }
 
@@ -206,6 +205,6 @@
 }
 
 .user-name {
-  color: #df5a58;
+  color: #f68685;
   margin-left: -8px;
 }

@@ -1,231 +1,232 @@
 .product-name {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .home-link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .catagory-fild {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .home-catagory {
-    width: 23%;
-    display: inline-block;
-    background-color: #f6f6f6;
-    margin-left: 22px;
-    border-radius: 5px;
+  width: 23%;
+  display: inline-block;
+  background-color: #f6f6f6;
+  margin-left: 22px;
+  border-radius: 5px;
 }
 
 .home-catagory img {
-    height: 226px;
-    width: 100%;
-    border-radius: 7px;
-
+  height: 226px;
+  width: 100%;
+  border-radius: 7px;
 }
 
 .home-catagory p {
-    font-size: 20px;
-    text-align: center;
-    margin-top: 10px;
-    letter-spacing: 2px;
-    font-family: fangsong;
-
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  font-family: fangsong;
 }
-
-
 
 .thard-contaent img {
-    width: 100%;
-    height: 420px;
-    border-radius: 10px;
+  width: 100%;
+  height: 425px;
+  border-radius: 10px;
 }
 
-
 .thard-contaent-secend-part h1 {
-    margin-top: 30px;
-    margin-bottom: 7px;
-    letter-spacing: 4px;
-    font-family: fangsong;
+  margin-top: 30px;
+  margin-bottom: 7px;
+  letter-spacing: 4px;
+  font-family: fangsong;
 }
 
 .thard-contaent-secend-part p {
-    font-size: 18px;
-    font-family: fangsong;
-    letter-spacing: 1px;
-    line-height: 32px;
-    padding: 10px;
+  font-size: 18px;
+  font-family: fangsong;
+  letter-spacing: 1px;
+  line-height: 32px;
+  padding: 10px;
 }
 
 .others-part-one {
-    border-radius: 4px;
+  border-radius: 4px;
 }
 
 .others-part-one img {
-    width: 100%;
-    height: 420px;
+  width: 100%;
+  height: 420px;
 }
 
 .others-part-one {
-    display: flex;
+  display: flex;
 }
 
 .first-image {
-    width: 65%;
-    margin: 0px !important;
-    padding: 0;
+  width: 65%;
+  margin: 0px !important;
+  padding: 0;
 }
 
 .secend-image {
-    width: 35%;
-    margin: 0px !important;
-    padding: 0;
-
+  width: 35%;
+  margin: 0px !important;
+  padding: 0;
 }
 
 .third-first-image {
-    width: 45%;
-    margin: 0px !important;
-    padding: 0;
+  width: 45%;
+  margin: 0px !important;
+  padding: 0;
 }
 
 .third-secend-image {
-    width: 55%;
-    margin: 0px !important;
-    padding: 0;
+  width: 55%;
+  margin: 0px !important;
+  padding: 0;
 }
 
 .LadiesBag:hover {
-    background-color: #5c5151e6;
+  background-color: #5c5151e6;
 }
 
-
 @media screen and (max-width: 844px) {
-    .catagory-fild {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+  .catagory-fild {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
-    .home-catagory {
-        width: 45%;
-        background-color: #f6f6f6;
-        margin-left: 16px;
-        border-radius: 5px;
-        padding: 1px;
-        height: 207px;
-    }
+  .home-catagory {
+    width: 45%;
+    background-color: #f6f6f6;
+    margin-left: 16px;
+    border-radius: 5px;
+    padding: 1px;
+    height: 207px;
+  }
 
-    .home-catagory p {
-        font-size: 18px;
-    }
+  .home-catagory p {
+    font-size: 18px;
+  }
 
-    .home-catagory img {
-        width: 100%;
-        height: 80%;
-    }
+  .home-catagory img {
+    width: 100%;
+    height: 80%;
+  }
 
-    .link-info-fild {
-        display: contents;
-    }
+  .link-info-fild {
+    display: contents;
+  }
 
-    .others-part-one {
-        display: flex;
-    }
+  .others-part-one {
+    display: flex;
+  }
 
-    .first-image {
-        width: 65%;
-        margin: 0px !important;
-        padding: 0;
-    }
+  .first-image {
+    width: 65%;
+    margin: 0px !important;
+    padding: 0;
+  }
 
-    .secend-image {
-        width: 35%;
-        margin: 0px !important;
-        padding: 0;
-    }
+  .secend-image {
+    width: 35%;
+    margin: 0px !important;
+    padding: 0;
+  }
 
-    .others-part-one img {
-        width: 100%;
-        height: 123px;
-    }
+  .others-part-one img {
+    width: 100%;
+    height: 123px;
+  }
 
-    .third-first-image {
-        width: 35%;
-        margin: 0px !important;
-        padding: 0;
-    }
+  .third-first-image {
+    width: 35%;
+    margin: 0px !important;
+    padding: 0;
+  }
 
-    .third-secend-image {
-        width: 65%;
-        margin: 0px !important;
-        padding: 0;
-    }
-
+  .third-secend-image {
+    width: 65%;
+    margin: 0px !important;
+    padding: 0;
+  }
+  .thard-contaent img {
+    width: 100%;
+    height: 390px;
+    border-radius: 10px;
+  }
 }
 
 @media screen and (max-width: 667px) {
-    .catagory-fild {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+  .catagory-fild {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
-    .home-catagory {
-        width: 42%;
-        background-color: #f6f6f6;
-        margin-left: 17px;
-        border-radius: 5px;
-        padding: 1px;
-        height: 207p
-    }
+  .home-catagory {
+    width: 42%;
+    background-color: #f6f6f6;
+    margin-left: 17px;
+    border-radius: 5px;
+    padding: 1px;
+    height: 207p;
+  }
 
-    .home-catagory p {
-        font-size: 18px;
-    }
+  .home-catagory p {
+    font-size: 18px;
+  }
 
-    .home-catagory img {
-        width: 100%;
-        height: 80%;
-    }
+  .home-catagory img {
+    width: 100%;
+    height: 80%;
+  }
 
-    .link-info-fild {
-        display: contents;
-    }
+  .link-info-fild {
+    display: contents;
+  }
 
-    .others-part-one {
-        display: flex;
-    }
+  .others-part-one {
+    display: flex;
+  }
 
-    .first-image {
-        width: 65%;
-        margin: 0px !important;
-        padding: 0;
-    }
+  .first-image {
+    width: 65%;
+    margin: 0px !important;
+    padding: 0;
+  }
 
-    .secend-image {
-        width: 35%;
-        margin: 0px !important;
-        padding: 0;
-    }
+  .secend-image {
+    width: 35%;
+    margin: 0px !important;
+    padding: 0;
+  }
 
-    .others-part-one img {
-        width: 100%;
-        height: 123px;
-    }
+  .others-part-one img {
+    width: 100%;
+    height: 123px;
+  }
 
-    .third-first-image {
-        width: 35%;
-        margin: 0px !important;
-        padding: 0;
-    }
+  .third-first-image {
+    width: 35%;
+    margin: 0px !important;
+    padding: 0;
+  }
 
-    .third-secend-image {
-        width: 65%;
-        margin: 0px !important;
-        padding: 0;
-    }
-
+  .third-secend-image {
+    width: 65%;
+    margin: 0px !important;
+    padding: 0;
+  }
+  .thard-contaent img {
+    width: 100%;
+    height: 390px;
+    border-radius: 10px;
+  }
 }
