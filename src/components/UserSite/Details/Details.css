@@ -1,150 +1,144 @@
 .redio-btn-css {
-    padding: 4px 7px;
-    margin-right: 9px;
-    border-radius: 50% !important;
-    font-family: none;
-
+  padding: 4px 7px;
+  margin-right: 9px;
+  border-radius: 50% !important;
+  font-family: none;
 }
 
 .togolcss {
-    background-color: #0a741a !important;
-    padding: 4px 7px;
-    margin-right: 9px;
-    border-radius: 50% !important;
-    color: #fff;
+  background-color: #0a741a !important;
+  padding: 4px 7px;
+  margin-right: 9px;
+  border-radius: 50% !important;
+  color: #fff;
 }
 
 .Size {
-    font-size: 19px;
-    font-family: serif;
-    letter-spacing: 3px;
+  font-size: 19px;
+  font-family: serif;
+  letter-spacing: 3px;
 }
 
 .details-add-to {
-    border: 1px solid #ef7822;
-    padding: 5px 41px;
-    border-radius: 3px;
-    margin-top: 14px;
-    font-size: 17px;
-    background-color: #fff;
+  border: 1px solid #ef7822;
+  padding: 5px 41px;
+  border-radius: 3px;
+  margin-top: 14px;
+  font-size: 17px;
+  background-color: #fff;
 }
 
 .details-add-to:hover {
-    background-color: #ffe4c4;
-    color: #a52a2a;
+  background-color: #ffe4c4;
+  color: #a52a2a;
 }
 
 .price-details {
-    margin-top: 10px;
-    font-family: none;
-    letter-spacing: 1px;
-    font-size: 22px;
+  margin-top: 10px;
+  font-family: none;
+  letter-spacing: 1px;
+  font-size: 22px;
 }
 
 .image-chaild {
-    width: 220px;
-    height: 220px;
+  width: 220px;
+  height: 220px;
 }
 
 .details-imagess img {
-    cursor: pointer;
-    width: 100%;
+  cursor: pointer;
+  width: 100%;
+  height: 620px;
 }
 
 .container-imagess {
-    width: 100%;
-    max-width: 540px;
+  width: 100%;
+  max-width: 540px;
 }
 
 .slected {
-    height: 442px;
-    margin: 0 auto;
-    border: 1px solid #800080;
-    border-radius: 4px;
-
+  height: 442px;
+  margin: 0 auto;
+  border: 1px solid #800080;
+  border-radius: 4px;
 }
 
 .imagecontainer {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 17px 0 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 0 0 0;
 }
 
 .imagecontainer img {
-    width: 100px;
-    height: 100px;
-    margin: 5px 0;
-    border: 1px solid purple;
-    border-radius: 3px;
-
+  width: 100%;
+  height: 100px;
+  margin: 5px 0;
+  border: 1px solid purple;
+  border-radius: 3px;
 }
 
 .Description {
-    font-family: 'Josefin Slab', serif;
-    font-size: 17px;
-    letter-spacing: 1px;
-    font-weight: 600;
+  font-family: "Josefin Slab", serif;
+  font-size: 17px;
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 
 .product-info-details {
-    font-family: 'Josefin Slab', serif;
-    padding-left: 58px;
+  font-family: "Josefin Slab", serif;
+  padding-left: 58px;
 }
 
 .product-info-details p {
-    font-size: 29px;
+  font-size: 29px;
 }
 
-
-
 @media screen and (max-width: 844px) {
-    .details-imagess img {
-        width: 100%;
-        height: 300px;
-    }
+  .details-imagess img {
+    width: 350px;
+    height: 350px;
+  }
 
-    .imagecontainer {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 37px;
-    }
+  .imagecontainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 37px;
+  }
 
-    .imagecontainer img {
-        width: 23%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        height: 69px;
-    }
+  .imagecontainer img {
+    width: 23%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 69px;
+  }
 
-    .product-info-details p {
-        font-size: 29px;
-        margin-top: 2px;
-    }
+  .product-info-details p {
+    font-size: 29px;
+    margin-top: 2px;
+  }
 
-    .Size {
-        margin-top: 19px;
-        font-size: 20px;
-    }
+  .Size {
+    margin-top: 19px;
+    font-size: 20px;
+  }
 
-    .product-info-details {
-        padding-left: 10px;
-    }
+  .product-info-details {
+    padding-left: 10px;
+  }
 
-    .size-batton-value {
-        display: inline-block;
-        flex-wrap: wrap;
-        padding: 1px;
-    }
+  .size-batton-value {
+    display: inline-block;
+    flex-wrap: wrap;
+    padding: 1px;
+  }
 
-    .redio-btn-css {
-        margin-bottom: 15px;
-    }
+  .redio-btn-css {
+    margin-bottom: 15px;
+  }
 
-    .togolcss {
-        margin-bottom: 15px;
-    }
-
-
+  .togolcss {
+    margin-bottom: 15px;
+  }
 }
