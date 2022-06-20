@@ -38,21 +38,21 @@ const Footer = () => {
               </li>
               <li className="spical">
                 <a
-                  href="https://www.facebook.com/"
+                  href="https://www.facebook.com/emirates.lifestyle"
                   rel="noreferrer"
                   target="_blank"
                 >
                   <FaFacebookF />
                 </a>
                 <a
-                  href="https://web.whatsapp.com/"
+                  href="https://wa.me/message/RVYZNEVGF4FAM1"
                   rel="noreferrer"
                   target="_blank"
                 >
                   <FaWhatsapp />
                 </a>
                 <a
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/emirateslifestyles"
                   rel="noreferrer"
                   target="_blank"
                 >
@@ -66,8 +66,13 @@ const Footer = () => {
               <h3 className="h">Useful Links</h3>
             </div>
             <ul className="footer-menu">
-              <Link className="footer-item" to="/">
-                Under maintenance
+              <Link className="footer-item" to="/AboutUs">
+                About Us
+              </Link>
+            </ul>
+            <ul className="footer-menu">
+              <Link className="footer-item" to="/ExchangePolicy">
+                Shipping and Exchange Policy
               </Link>
             </ul>
           </Col>

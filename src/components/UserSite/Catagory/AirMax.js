@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ScaleLoader } from "react-spinners";
+
+
+
 const AirMax = () => {
+
   const [Air_Max, setAir_Max] = useState([]);
-  console.log(Air_Max)
 
   useEffect(() => {
     fetch("https://secret-ravine-65882.herokuapp.com/Product")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
         const AirMax = data?.filter(
-          (Air_Max) => Air_Max?.Catagory === "Air-Max"
+          (Air_Max) => Air_Max?.Catagory === "Air_Max"
         );
         setAir_Max(AirMax);
       });
