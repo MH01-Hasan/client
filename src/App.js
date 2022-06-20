@@ -29,6 +29,10 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import Yeezy350v2 from "./components/UserSite/Catagory/Yeezy350v2";
 import Yeezy700 from "./components/UserSite/Catagory/Yeezy700";
 import Yeezy500 from "./components/UserSite/Catagory/Yeezy500";
+import AirJordan4 from "./components/UserSite/Catagory/AirJordan4";
+import Converse from "./components/UserSite/Catagory/Converse";
+import AboutUs from "./components/Shared/F_ctg/AboutUs";
+import ExchangePolicy from "./components/Shared/F_ctg/ExchangePolicy";
 
 function App() {
   return (
@@ -48,12 +52,6 @@ function App() {
 
             <Route path="/Order/:id" element={<Order />} />
 
-            {/* <Route path="/makeadmin" element={ <MakeAdmin />}/>
-            <Route path="/AddProduct" element={<AddProduct />} />
-            <Route path="/ManageOrder" element={<ManageOrder />} />
-            <Route path="/ManageProduct" element={<ManageProduct />} />
-            <Route path="/Delivery" element={<Delevery />} /> */}
-
             <Route path="product/catagory/AirForce" element={<AirForce />} />
             <Route path="product/catagory/AirJorden" element={<AirJorden />} />
             <Route path="product/catagory/AirMax" element={<AirMax />} />
@@ -62,6 +60,8 @@ function App() {
               path="product/catagory/Designers_Shoes"
               element={<DesignersShoes />}
             />
+            <Route path="product/catagory/AirJordan4" element={<AirJordan4 />} />
+            <Route path="product/catagory/Converse" element={<Converse />} />
             <Route path="product/catagory/LadiesBag" element={<LadiesBag />} />
             <Route path="product/catagory/Watch" element={<Watch />} />
             <Route path="product/catagory/Wallet" element={<Wallet />} />
@@ -72,12 +72,15 @@ function App() {
             />
             <Route path="product/catagory/Yeezy500" element={<Yeezy500 />} />
             <Route
-              path="product/catagory/UltraBoost"
+              path="product/catagory/YeezySlide"
               element={<UltraBoost />}
             />
             <Route path="product/catagory/Yeezy700" element={<Yeezy700 />} />
 
             <Route path="/information" element={<Shiping />} />
+
+            <Route path="/AboutUs" element={<AboutUs />} />
+            <Route path="/ExchangePolicy" element={<ExchangePolicy />} />
 
             <Route
               path="/MyOrder"

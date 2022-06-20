@@ -1,0 +1,27 @@
+.LifestylesStore {
+    font-size: 16px;
+    line-height: 36px;
+    padding: 7px;
+    color: #000000ba;
+    margin-top: 25px;
+    font-family: system-ui;
+}
+
+.about-fild {
+    text-align: center;
+    padding: 32px;
+}
+
+.About {
+    letter-spacing: 1px;
+    border-bottom: 2px solid #a528ed;
+    display: initial;
+    padding-bottom: 5px;
+    font-family: cursive;
+}
+
+.social-link {
+    margin-right: 16px;
+    color: #3131c6f0;
+    border-bottom: 1px solid #3131c6f0;
+}

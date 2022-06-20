@@ -24,10 +24,14 @@ const HomeProduct = () => {
             </div>
           </Link>
         </div>
-        <div className=" mt-3 home-catagory">
-          <Link to="product/catagory/AirMax" className="home-link">
+        <div className="mt-3 home-catagory">
+          <Link to="/product/catagory/AirJordan4 " className="home-link">
             <div className="link-info-fild">
-              <img src="https://i.ibb.co/W2whf8H/6.jpg" alt="" />
+              <img
+                src="https://i.ibb.co/W2whf8H/6.jpg"
+                alt=""
+                className="ladisbag-image"
+              />
               <p>Air Jordan 4</p>
             </div>
           </Link>
@@ -64,10 +68,10 @@ const HomeProduct = () => {
             </Link>
           </div>
           <div className=" mt-3 home-catagory">
-            <Link to="product/catagory/UltraBoost" className="home-link">
+            <Link to="product/catagory/YeezySlide" className="home-link">
               <div className="link-info-fild">
                 <img src="https://i.ibb.co/hLSywF7/1.jpg" alt="" />
-                <p>Ultra Boost</p>
+                <p>Yeezy Slide</p>
               </div>
             </Link>
           </div>
@@ -99,6 +103,30 @@ const HomeProduct = () => {
               </div>
             </Link>
           </div>
+          {/* Converse */}
+          <div className=" mt-3 home-catagory">
+            <Link to="product/catagory/Converse" className="home-link">
+              <div className="link-info-fild">
+                <img src="https://i.ibb.co/W2whf8H/6.jpg" alt="" />
+                <p>Converse</p>
+              </div>
+            </Link>
+          </div>
+          {/* Converse */}
+
+
+          {/* Air Jordan 4 */}
+          <div className=" mt-3 home-catagory">
+            <Link to="product/catagory/AirMax" className="home-link">
+              <div className="link-info-fild">
+                <img src="https://i.ibb.co/W2whf8H/6.jpg" alt="" />
+                <p>Air Max</p>
+              </div>
+            </Link>
+          </div>
+          {/* Air Jordan 4 */}
+
+
         </div>
       </div>
       {/*Designers Shoes section  End */}

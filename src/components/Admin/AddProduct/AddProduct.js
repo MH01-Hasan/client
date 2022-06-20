@@ -355,20 +355,24 @@ const AddProduct = () => {
                 <option disabled value="Category">
                   Category
                 </option>
-                <option value="Air_Jorden">Air Jorden</option>
-                <option value="Air_Force">Air Force</option>
-                <option value="Dunk">Dunk</option>
-                <option value="Air_Max">Air Max</option>
+                <option value="Air_Force">Air Force 1</option>
+                <option value="Air_Jorden">Air Jorden 1</option>
+                <option value="AirJordan4">Air Jorden 4</option>
+                <option value="Dunk">Nike Dunk</option>
+
 
                 <option value="Yeezy_350_v2">Yeezy 350 v2</option>
+                <option value="Yeezy_500">Yeezy 500</option>
+                <option value="Ultra_Boost">Yeezy Slide</option>
                 <option value="Yeezy_700">Yeezy 700</option>
-                <option value="Yeezy_500">Yeezy_500</option>
-                <option value="Ultra_Boost">Ultra Boost</option>
 
                 <option value="Designers_Shoes">Designers Shoes</option>
+                <option value="Converse">Converse</option>
+                <option value="Air_Max">Air Max</option>
+
                 <option value="Ladies_Bag">Ladies Bag</option>
-                <option value="Wallet">Wallet</option>
                 <option value="Watch">Watch</option>
+                <option value="Wallet">Wallet</option>
                 <option value="Others">Others</option>
               </select>
               <input

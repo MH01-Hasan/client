@@ -1,0 +1,56 @@
+.Shipping {}
+
+.Exchange-fild {
+    width: 100%;
+}
+
+.part {
+    border: 1px solid #0c250c17;
+    padding: 14px;
+    width: 48%;
+    margin-left: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 0px #0e01017d;
+}
+
+.Exchange-h1 {
+    text-align: center;
+    font-family: 'Josefin Slab';
+    letter-spacing: 2px;
+    color: #195f08;
+    border-bottom: 1px solid #008000;
+    padding-bottom: 11px;
+}
+
+.heading-ex {
+    border-bottom: 3px solid #e20b0b;
+    display: inline-block;
+    padding-bottom: 4px;
+    font-family: fangsong;
+    letter-spacing: 1px;
+}
+
+.pre-ex {
+    padding: 12px;
+    font-family: 'Josefin Slab';
+    font-size: 18px;
+    line-height: 29px;
+}
+
+@media screen and (max-width: 844px) {
+    .part {
+        width: 94%;
+        margin-top: 23px;
+        margin-left: 19px;
+    }
+
+
+}
+
+@media screen and (max-width: 653px) {
+    .part {
+        width: 94%;
+        margin-top: 23px;
+        margin-left: 19px;
+    }
+}
