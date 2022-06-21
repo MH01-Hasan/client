@@ -58,35 +58,63 @@ const Banner = () => {
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
-              src="https://i.ibb.co/BzQjGpT/4.jpg"
+              src="https://i.ibb.co/BP82nvc/1.png"
               class="d-block w-100 "
               alt="..."
             />
           </div>
           <div class="carousel-item">
             <img
-              src="https://i.ibb.co/Fsv4Xcm/5.jpg"
+              src="https://i.ibb.co/JzszK6W/8.png"
               class="d-block w-100 "
               alt="..."
             />
           </div>
           <div class="carousel-item">
             <img
-              src="https://i.ibb.co/qmwHcG7/7.jpg"
+              src="https://i.ibb.co/CHg20FC/3.png"
               class="d-block w-100 "
               alt="..."
             />
           </div>
           <div class="carousel-item">
             <img
-              src="https://i.ibb.co/WFLyRmx/1.jpg"
+              src="https://i.ibb.co/Vw4Tz0y/2.png"
               class="d-block w-100 "
               alt="..."
             />
           </div>
           <div class="carousel-item">
             <img
-              src="https://i.ibb.co/rvyv9hY/air.jpg"
+              src="https://i.ibb.co/2Ykh9N5/9.png"
+              class="d-block w-100 "
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://i.ibb.co/Nmjqgxb/5.png"
+              class="d-block w-100 "
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://i.ibb.co/Km8pgqW/4.png"
+              class="d-block w-100 "
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://i.ibb.co/0XMLFJw/7.png"
+              class="d-block w-100 "
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://i.ibb.co/VLWHDJp/6.png"
               class="d-block w-100 "
               alt="..."
             />

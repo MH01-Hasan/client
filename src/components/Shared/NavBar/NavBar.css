@@ -11,6 +11,7 @@
   z-index: 20;
   width: 100%;
   text-decoration: none;
+  font-family: "Joan", serif;
 }
 
 @media screen and (max-width: 467px) {
