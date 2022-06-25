@@ -1,6 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./HomeProduct.css";
+import img1 from "../../../images/nike/n1.jpg";
+import img2 from "../../../images/nike/n2.jpg";
+import img3 from "../../../images/nike/n3.jpg";
+import img4 from "../../../images/nike/n4.jpg";
+import img5 from "../../../images/adidas/a1.jpg";
+import img6 from "../../../images/adidas/a2.jpg";
+import img7 from "../../../images/adidas/a3.jpg";
+import img8 from "../../../images/adidas/a4.jpg";
+import img9 from "../../../images/designers/d1.jpg";
+import img10 from "../../../images/designers/d2.jpg";
+import img11 from "../../../images/designers/d3.jpg";
+import img12 from "../../../images/accessories/ac1.jpg";
+import img13 from "../../../images/accessories/ac2.jpg";
+import img14 from "../../../images/accessories/ac3.jpg";
+import img15 from "../../../images/accessories/ac4.png";
+import img16 from "../../../images/others/o1.jpg";
 
 const HomeProduct = () => {
   return (
@@ -11,7 +27,11 @@ const HomeProduct = () => {
         <div className="mt-3 home-catagory">
           <Link to="product/catagory/AirForce" className="home-link">
             <div className="link-info-fild">
-              <img src="https://i.ibb.co/QNCkC7g/8.jpg" alt="" />
+              <img
+                // src="https://i.ibb.co/QNCkC7g/8.jpg"
+                src={img1}
+                alt=""
+              />
               <p>Air Force 1</p>
             </div>
           </Link>
@@ -19,7 +39,11 @@ const HomeProduct = () => {
         <div className="mt-3 home-catagory">
           <Link to="product/catagory/AirJorden" className="home-link">
             <div className="link-info-fild">
-              <img src="https://i.ibb.co/1JtXKK5/7.jpg" alt="" />
+              <img
+                // src="https://i.ibb.co/1JtXKK5/7.jpg"
+                src={img2}
+                alt=""
+              />
               <p>Air Jordan 1</p>
             </div>
           </Link>
@@ -28,7 +52,8 @@ const HomeProduct = () => {
           <Link to="/product/catagory/AirJordan4 " className="home-link">
             <div className="link-info-fild">
               <img
-                src="https://i.ibb.co/W2whf8H/6.jpg"
+                // src="https://i.ibb.co/W2whf8H/6.jpg"
+                src={img3}
                 alt=""
                 className="ladisbag-image"
               />
@@ -39,7 +64,11 @@ const HomeProduct = () => {
         <div className=" mt-3 home-catagory">
           <Link to="product/catagory/Dunk" className="home-link">
             <div className="link-info-fild">
-              <img src="https://i.ibb.co/5k9WCSx/5.jpg" alt="" />
+              <img
+                // src="https://i.ibb.co/5k9WCSx/5.jpg"
+                src={img4}
+                alt=""
+              />
               <p>Nike Dunk</p>
             </div>
           </Link>
@@ -54,7 +83,11 @@ const HomeProduct = () => {
           <div className="mt-3 home-catagory">
             <Link to="product/catagory/Yeezy_350_v2" className="home-link">
               <div className="link-info-fild">
-                <img src="https://i.ibb.co/yds4BZk/4.jpg" alt="" />
+                <img
+                  // src="https://i.ibb.co/yds4BZk/4.jpg"
+                  src={img5}
+                  alt=""
+                />
                 <p>Yeezy 350 v2</p>
               </div>
             </Link>
@@ -62,7 +95,11 @@ const HomeProduct = () => {
           <div className="mt-3 home-catagory">
             <Link to="product/catagory/Yeezy500" className="home-link">
               <div className="link-info-fild">
-                <img src="https://i.ibb.co/k2kQctJ/3.jpg" alt="" />
+                <img
+                  // src="https://i.ibb.co/k2kQctJ/3.jpg"
+                  src={img6}
+                  alt=""
+                />
                 <p>Yeezy 500</p>
               </div>
             </Link>
@@ -70,7 +107,11 @@ const HomeProduct = () => {
           <div className=" mt-3 home-catagory">
             <Link to="product/catagory/YeezySlide" className="home-link">
               <div className="link-info-fild">
-                <img src="https://i.ibb.co/MCTrHBC/y.jpg" alt="" />
+                <img
+                  // src="https://i.ibb.co/MCTrHBC/y.jpg"
+                  src={img7}
+                  alt=""
+                />
                 <p>Yeezy Slide</p>
               </div>
             </Link>
@@ -78,7 +119,11 @@ const HomeProduct = () => {
           <div className=" mt-3 home-catagory">
             <Link to="product/catagory/Yeezy700" className="home-link">
               <div className="link-info-fild">
-                <img src="https://i.ibb.co/Y73FTx1/2.jpg" alt="" />
+                <img
+                  // src="https://i.ibb.co/Y73FTx1/2.jpg"
+                  src={img8}
+                  alt=""
+                />
                 <p>Yeezy 700</p>
               </div>
             </Link>
@@ -95,7 +140,8 @@ const HomeProduct = () => {
             <Link to="/product/catagory/Designers_Shoes" className="home-link">
               <div className="link-info-fild">
                 <img
-                  src="https://i.ibb.co/rtT92Rp/ds.jpg"
+                  // src="https://i.ibb.co/rtT92Rp/ds.jpg"
+                  src={img9}
                   alt=""
                   className="ladisbag-image"
                 />
@@ -107,7 +153,11 @@ const HomeProduct = () => {
           <div className=" mt-3 home-catagory">
             <Link to="product/catagory/Converse" className="home-link">
               <div className="link-info-fild">
-                <img src="https://i.ibb.co/BZtFFM3/c.jpg" alt="" />
+                <img
+                  // src="https://i.ibb.co/BZtFFM3/c.jpg"
+                  src={img10}
+                  alt=""
+                />
                 <p>Converse</p>
               </div>
             </Link>
@@ -118,7 +168,11 @@ const HomeProduct = () => {
           <div className=" mt-3 home-catagory">
             <Link to="product/catagory/AirMax" className="home-link">
               <div className="link-info-fild">
-                <img src="https://i.ibb.co/dLCg4j6/max.jpg" alt="" />
+                <img
+                  // src="https://i.ibb.co/dLCg4j6/max.jpg"
+                  src={img11}
+                  alt=""
+                />
                 <p>Air Max</p>
               </div>
             </Link>
@@ -136,7 +190,8 @@ const HomeProduct = () => {
             <Link to="/product/catagory/LadiesBag" className="home-link">
               <div className="link-info-fild">
                 <img
-                  src="https://i.ibb.co/GVT7WqT/b.jpg"
+                  // src="https://i.ibb.co/GVT7WqT/b.jpg"
+                  src={img12}
                   alt=""
                   className="ladisbag-image"
                 />
@@ -147,7 +202,11 @@ const HomeProduct = () => {
           <div className="mt-3 home-catagory">
             <Link to="/product/catagory/Watch" className="home-link">
               <div className="link-info-fild">
-                <img src="https://i.ibb.co/z7RjXfn/w.jpg" alt="" />
+                <img
+                  // src="https://i.ibb.co/z7RjXfn/w.jpg"
+                  src={img13}
+                  alt=""
+                />
                 <p>Watch</p>
               </div>
             </Link>
@@ -156,7 +215,8 @@ const HomeProduct = () => {
             <Link to="product/catagory/Wallet" className="home-link">
               <div className="link-info-fild">
                 <img
-                  src="https://i.ibb.co/gyXxtSj/wl.jpg"
+                  // src="https://i.ibb.co/gyXxtSj/wl.jpg"
+                  src={img14}
                   alt=""
                   className="ladisbag-image"
                 />
@@ -167,7 +227,11 @@ const HomeProduct = () => {
           <div className=" mt-3 home-catagory">
             <Link to="product/catagory/Others" className="home-link">
               <div className="link-info-fild">
-                <img src="https://i.ibb.co/QNmXWGz/others.png" alt="" />
+                <img
+                  // src="https://i.ibb.co/QNmXWGz/others.png"
+                  src={img15}
+                  alt=""
+                />
                 <p>Others</p>
               </div>
             </Link>
@@ -178,7 +242,11 @@ const HomeProduct = () => {
 
       <div className="row mt-3">
         <div className="col-lg-7 col-sm-12 thard-contaent mt-5">
-          <img src="https://i.ibb.co/DYW7SbY/mideljpg.jpg" alt="" />
+          <img
+            // src="https://i.ibb.co/DYW7SbY/mideljpg.jpg"
+            src={img16}
+            alt=""
+          />
         </div>
 
         <div className="col-lg-5 col-sm-12 mt-2 thard-contaent-secend-part">
