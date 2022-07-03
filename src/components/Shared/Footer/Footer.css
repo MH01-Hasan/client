@@ -4,6 +4,9 @@
   --body-color: #cbd2e1;
   --second-color: #f68685;
 }
+.foofont {
+  font-family: "Playfair Display", serif;
+}
 footer {
   background-color: var(--footer-bg);
 }
