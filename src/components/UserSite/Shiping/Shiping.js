@@ -37,8 +37,9 @@ const Shiping = () => {
   let navigate = useNavigate();
 
   const current = new Date();
-  const date = `${current.getDate()}/${current.getMonth() + 1
-    }/${current.getFullYear()}`;
+  const date = `${current.getDate()}/${
+    current.getMonth() + 1
+  }/${current.getFullYear()}`;
 
   const handelClick = () => {
     const order = {
@@ -88,7 +89,7 @@ const Shiping = () => {
                   />
                   <br />
 
-                  <div className="check-box">
+                  {/* <div className="check-box">
                     <input
                       type="checkbox"
                       {...register("check")}
@@ -96,7 +97,7 @@ const Shiping = () => {
                       className="check"
                     />
                     <label>Email me with news and offers</label>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div>
@@ -156,6 +157,10 @@ const Shiping = () => {
                   <option value="Sharjah">Sharjah</option>
                   <option value="Fujairah">Fujairah</option>
                   <option value="Umm al-Quwain">Umm al-Quwain</option>
+                  <option value="Al Ain, Abu Dhabi">Al Ain, Abu Dhabi</option>
+                  <option value="Western Region, Abu Dhabi">
+                    Western Region, Abu Dhabi
+                  </option>
                 </select>
                 <br />
                 <input

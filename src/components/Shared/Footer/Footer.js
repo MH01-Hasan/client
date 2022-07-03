@@ -13,7 +13,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer>
-      <Container>
+      <Container className="foofont">
         <Row className="text-center">
           <Col sm={6} lg={4}>
             <div className="footer-menu-heading">

@@ -1,14 +1,14 @@
 import React from "react";
 import "./Banner.css";
-import img1 from "../../../images/slide/s1.png";
-import img2 from "../../../images/slide/s2.png";
-import img3 from "../../../images/slide/s3.png";
-import img4 from "../../../images/slide/s4.png";
-import img5 from "../../../images/slide/s5.png";
-import img6 from "../../../images/slide/s6.png";
-import img7 from "../../../images/slide/s7.png";
-import img8 from "../../../images/slide/s8.png";
-import img9 from "../../../images/slide/s9.png";
+import img1 from "../../../images/slide/1.JPEG";
+import img2 from "../../../images/slide/2.JPEG";
+import img3 from "../../../images/slide/3.JPEG";
+import img4 from "../../../images/slide/4.JPEG";
+import img5 from "../../../images/slide/5.JPEG";
+import img6 from "../../../images/slide/6.JPEG";
+// import img7 from "../../../images/slide/s7.png";
+// import img8 from "../../../images/slide/s8.png";
+// import img9 from "../../../images/slide/s9.png";
 
 const Banner = () => {
   return (
@@ -113,7 +113,7 @@ const Banner = () => {
               alt="..."
             />
           </div>
-          <div class="carousel-item">
+          {/* <div class="carousel-item">
             <img
               // src="https://i.ibb.co/Km8pgqW/4.png"
               src={img7}
@@ -136,7 +136,7 @@ const Banner = () => {
               class="d-block w-100 "
               alt="..."
             />
-          </div>
+          </div> */}
         </div>
         <button
           class="carousel-control-prev"
