@@ -10,7 +10,6 @@ const Details = () => {
   const { id } = useParams();
   // ....................................Api Load Data...........................
   const [product, setProduct] = useState({});
-  // console.log(product)
   const [lodding, setLodding] = useState(false);
 
 
@@ -45,7 +44,7 @@ const Details = () => {
 
   // ....................................user Inpur Product Size..........................
   const [radioValue, setRadioValue] = useState("");
-  console.log(radioValue)
+
   product["Size"] = radioValue;
 
   const radios = [

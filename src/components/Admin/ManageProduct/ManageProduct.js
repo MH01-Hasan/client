@@ -17,7 +17,7 @@ const ManageProduct = () => {
 
   return (
     <div>
-      <Table responsive="sm md xl">
+      <Table responsive="sm md xl table sticky">
         <thead>
           <tr>
             <th>Sl.No</th>
